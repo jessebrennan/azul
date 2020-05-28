@@ -70,9 +70,6 @@ from more_itertools import (
     grouper,
     one,
 )
-from openapi_spec_validator import (
-    validate_spec,
-)
 import requests
 
 from azul import (
@@ -751,11 +748,6 @@ class OpenAPIIntegrationTest(AzulTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.headers['content-type'], 'text/html')
         self.assertGreater(len(response.content), 0)
-        # validate OpenAPI spec
-        response = requests.get(service + '/openapi')
-        response.raise_for_status()
-        spec = response.json()
-        validate_spec(spec)
 
 
 @unittest.skipIf(config.dss_endpoint is None,

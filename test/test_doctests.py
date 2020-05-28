@@ -17,7 +17,6 @@ from azul.logging import (
     configure_test_logging,
 )
 from azul.modules import (
-    load_app_module,
     load_module,
     load_script,
 )
@@ -83,7 +82,6 @@ def load_tests(_loader, tests, _ignore):
         azul.uuids,
         azul.vendored.frozendict,
         retorts,
-        load_app_module('service'),
         load_script('check_branch'),
         load_script('envhook'),
         load_script('export_environment'),
