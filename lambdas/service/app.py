@@ -12,9 +12,6 @@ import os
 import re
 import time
 from typing import (
-    Any,
-    Callable,
-    Mapping,
     Optional,
     Sequence,
     Tuple,
@@ -33,14 +30,10 @@ from chalice import (
     NotFoundError,
     Response,
 )
-from more_itertools import (
-    one,
-)
 
 from azul import (
     CatalogName,
     IndexName,
-    RequirementError,
     cache,
     cached_property,
     config,
@@ -68,9 +61,6 @@ from azul.openapi import (
 from azul.plugins import (
     MetadataPlugin,
     ServiceConfig,
-)
-from azul.plugins.metadata.hca.transform import (
-    value_and_unit,
 )
 from azul.portal_service import (
     PortalService,
@@ -643,244 +633,13 @@ def version():
     }
 
 
-def validate_repository_search(params, **validators):
-    validate_params(params, **{
-        'catalog': validate_catalog,
-        'filters': validate_filters,
-        'order': str,
-        'search_after': str,
-        'search_after_uid': str,
-        'search_before': str,
-        'search_before_uid': str,
-        'size': validate_size,
-        'sort': validate_facet,
-        **validators
-    })
-
-
 min_page_size = 1
 max_page_size = 1000
-
-
-def validate_catalog(catalog):
-    try:
-        IndexName.validate_catalog_name(catalog)
-    except RequirementError as e:
-        raise BadRequestError(e)
-    else:
-        if catalog not in config.catalogs:
-            raise BadRequestError(f'Catalog name {catalog!r} is invalid. '
-                                  f'Must be one of {set(config.catalogs)}.')
-
-
-def validate_size(size):
-    """
-    >>> validate_size('1000')
-
-    >>> validate_size('1001')
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: Invalid value for parameter `size`, must not be greater than 1000
-    >>> validate_size('0')
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: Invalid value for parameter `size`, must be greater than 0
-    >>> validate_size('foo')
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: Invalid value for parameter `size`
-    """
-    try:
-        size = int(size)
-    except BaseException:
-        raise BadRequestError('Invalid value for parameter `size`')
-    else:
-        if size > max_page_size:
-            raise BadRequestError(f'Invalid value for parameter `size`, must not be greater than {max_page_size}')
-        elif size < min_page_size:
-            raise BadRequestError('Invalid value for parameter `size`, must be greater than 0')
-
-
-def validate_filters(filters):
-    """
-    >>> validate_filters('{"fileName": {"is": ["foo.txt"]}}')
-
-    >>> validate_filters('"')
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: The `filters` parameter is not valid JSON
-
-    >>> validate_filters('""')
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: The `filters` parameter must be a dictionary.
-
-    >>> validate_filters('{"sampleDisease": ["H syndrome"]}') # doctest: +NORMALIZE_WHITESPACE
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: \
-    The `filters` parameter entry for `sampleDisease` must be a single-item dictionary.
-
-    >>> validate_filters('{"sampleDisease": {"is": "H syndrome"}}') # doctest: +NORMALIZE_WHITESPACE
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: The value of the `is` relation in the `filters` parameter entry for \
-    `sampleDisease` is not a list.
-
-    >>> validate_filters('{"sampleDisease": {"was": "H syndrome"}}') # doctest: +NORMALIZE_WHITESPACE
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: The relation in the `filters` parameter entry for `sampleDisease` \
-    must be one of ('is', 'contains', 'within', 'intersects')
-    """
-    try:
-        filters = json.loads(filters)
-    except Exception:
-        raise BadRequestError('The `filters` parameter is not valid JSON')
-    if type(filters) is not dict:
-        raise BadRequestError('The `filters` parameter must be a dictionary.')
-    for facet, filter_ in filters.items():
-        validate_facet(facet)
-        try:
-            relation, value = one(filter_.items())
-        except Exception:
-            raise BadRequestError(f'The `filters` parameter entry for `{facet}` must be a single-item dictionary.')
-        else:
-            valid_relations = ('is', 'contains', 'within', 'intersects')
-            if relation in valid_relations:
-                if not isinstance(value, list):
-                    raise BadRequestError(
-                        msg=f'The value of the `{relation}` relation in the `filters` parameter '
-                            f'entry for `{facet}` is not a list.')
-            else:
-                raise BadRequestError(f'The relation in the `filters` parameter entry for `{facet}`'
-                                      f' must be one of {valid_relations}')
-            if facet == 'organismAge':
-                validate_organism_age_filter(value)
-
-
-def validate_organism_age_filter(values):
-    for value in values:
-        try:
-            value_and_unit.to_index(value)
-        except RequirementError as e:
-            raise BadRequestError(e)
-
-
-def validate_facet(facet_name: str):
-    """
-    >>> validate_facet('fileName')
-
-    >>> validate_facet('fooBar')
-    Traceback (most recent call last):
-    ...
-    chalice.app.BadRequestError: BadRequestError: Unknown facet `fooBar`
-    """
-    if facet_name not in app.service_config.translation:
-        raise BadRequestError(msg=f'Unknown facet `{facet_name}`')
-
-
-class Mandatory:
-    """
-    Validation wrapper signifying that a parameter is mandatory.
-    """
-
-    def __init__(self, validator: Callable) -> None:
-        super().__init__()
-        self._validator = validator
-
-    def __call__(self, param):
-        return self._validator(param)
-
-
-def validate_params(query_params: Mapping[str, str],
-                    allow_extra_params: bool = False,
-                    **validators: Callable[[Any], Any]) -> None:
-    """
-    Validates request query parameters for web-service API.
-
-    :param query_params: the parameters to be validated
-
-    :param allow_extra_params:
-
-        When False, only parameters specified via '**validators' are
-        accepted, and validation fails if additional parameters are present.
-        When True, additional parameters are allowed but their value is not
-        validated.
-
-    :param validators:
-
-        A dictionary mapping the name of a parameter to a function that will
-        be used to validate the parameter if it is provided. The callable
-        will be called with a single argument, the parameter value to be
-        validated, and is expected to raise ValueError, TypeError or
-        azul.RequirementError if the value is invalid. Only these exceptions
-        will yield a 4xx status response, all other exceptions will yield a
-        500 status response. If the validator is an instance of `Mandatory`,
-        then validation will fail if its corresponding parameter is not
-        provided.
-
-    >>> validate_params({'order': 'asc'}, order=str)
-
-    >>> validate_params({'size': 'foo'}, size=int)
-    Traceback (most recent call last):
-        ...
-    chalice.app.BadRequestError: BadRequestError: Invalid value for `size`
-
-    >>> validate_params({'order': 'asc', 'foo': 'bar'}, order=str)
-    Traceback (most recent call last):
-        ...
-    chalice.app.BadRequestError: BadRequestError: Unknown query parameter `foo`
-
-    >>> validate_params({'order': 'asc', 'foo': 'bar'}, order=str, allow_extra_params=True)
-
-    >>> validate_params({}, foo=str)
-
-    >>> validate_params({}, foo=Mandatory(str))
-    Traceback (most recent call last):
-        ...
-    chalice.app.BadRequestError: BadRequestError: Missing required query parameter `foo`
-
-    """
-
-    def fmt_error(err_description, params):
-        # Sorting is to produce a deterministic error message
-        joined = ', '.join(f'`{p}`' for p in sorted(params))
-        return f'{err_description} {pluralize("query parameter", len(params))} {joined}'
-
-    provided_params = query_params.keys()
-    validation_params = validators.keys()
-    mandatory_params = {p for p, v in validators.items() if isinstance(v, Mandatory)}
-
-    if not allow_extra_params:
-        extra_params = provided_params - validation_params
-        if extra_params:
-            raise BadRequestError(msg=fmt_error('Unknown', extra_params))
-
-    if mandatory_params:
-        missing_params = mandatory_params - provided_params
-        if missing_params:
-            raise BadRequestError(msg=fmt_error('Missing required', missing_params))
-
-    for param_name, param_value in query_params.items():
-        try:
-            validator = validators[param_name]
-        except KeyError:
-            pass
-        else:
-            try:
-                validator(param_value)
-            except (TypeError, ValueError, RequirementError):
-                raise BadRequestError(msg=f'Invalid value for `{param_name}`')
 
 
 @app.route('/integrations', methods=['GET'], cors=True)
 def get_integrations():
     query_params = app.current_request.query_params or {}
-    validate_params(query_params,
-                    entity_type=Mandatory(str),
-                    integration_type=Mandatory(str),
-                    entity_ids=str)
     try:
         entity_ids = query_params['entity_ids']
     except KeyError:
@@ -939,7 +698,6 @@ def list_catalogs():
 
 def repository_search(entity_type: str, item_id: Optional[str]) -> JSON:
     query_params = app.current_request.query_params or {}
-    validate_repository_search(query_params)
     catalog = app.catalog
     filters = query_params.get('filters')
     try:
@@ -1266,9 +1024,6 @@ def get_summary():
     :return: Returns a jsonified Summary API response
     """
     query_params = app.current_request.query_params or {}
-    validate_params(query_params,
-                    filters=str,
-                    catalog=IndexName.validate_catalog_name)
     filters = query_params.get('filters')
     catalog = app.catalog
     service = IndexQueryService()
@@ -1338,7 +1093,6 @@ def get_search():
     to the endpoint
     """
     query_params = app.current_request.query_params or {}
-    validate_repository_search(query_params, q=str, type=str, field=str)
     catalog = app.catalog
     filters = query_params.get('filters')
     _query = query_params.get('q', '')
@@ -1534,14 +1288,8 @@ def handle_manifest_generation_request() -> Tuple[int, Manifest]:
     a Manifest object with a retry URL for the view function to handle.
     """
     query_params = app.current_request.query_params or {}
-    validate_params(query_params,
-                    format=ManifestFormat,
-                    catalog=IndexName.validate_catalog_name,
-                    filters=str,
-                    token=str)
     catalog = app.catalog
     filters = query_params.get('filters', '{}')
-    validate_filters(filters)
     format_ = ManifestFormat(query_params.get('format', ManifestFormat.compact.value))
     service = ManifestService(StorageService())
     filters = service.parse_filters(filters)
@@ -1774,16 +1522,6 @@ def _repository_files(file_uuid: str, fetch: bool) -> MutableJSON:
         else:
             raise ValueError
 
-    validate_params(query_params,
-                    catalog=str,
-                    version=str,
-                    fileName=str,
-                    wait=validate_wait,
-                    requestIndex=int,
-                    replica=validate_replica,
-                    drsPath=str,
-                    token=str)
-
     # FIXME: Prevent duplicate filenames from files in different subgraphs by
     #        prepending the subgraph UUID to each filename when downloaded
     #        https://github.com/DataBiosphere/azul/issues/2682
@@ -1799,7 +1537,6 @@ def authenticate_via_fusillade():
     request = app.current_request
     authenticator = Authenticator()
     query_params = request.query_params or {}
-    validate_params(query_params, redirect_uri=str)
     if authenticator.is_client_authenticated(request.headers):
         return Response(body='', status_code=200)
     else:
@@ -2090,7 +1827,6 @@ def get_items_in_cart(cart_id):
     cart_id = None if cart_id == 'default' else cart_id
     user_id = get_user_id()
     query_params = app.current_request.query_params or {}
-    validate_params(query_params, resume_token=str)
     resume_token = query_params.get('resume_token')
     try:
         page = CartItemManager().get_paginable_cart_items(user_id, cart_id, resume_token=resume_token)
@@ -2453,7 +2189,6 @@ def handle_cart_export_request(cart_id: str = None):
     assert_jwt_ttl(config.cart_export_min_access_token_ttl)
     user_id = get_user_id()
     query_params = app.current_request.query_params or {}
-    validate_params(query_params, token=str)
     token = query_params.get('token')
     bearer_token = app.current_request.context['authorizer']['token']
     job_manager = CartExportJobManager()
@@ -2587,7 +2322,6 @@ def get_data_object(file_uuid):
     endpoint.
     """
     query_params = app.current_request.query_params or {}
-    validate_params(query_params, version=str)
     return app.drs_controller.get_object(file_uuid, query_params)
 
 
@@ -2638,7 +2372,6 @@ def get_data_object(file_uuid):
 )
 def get_data_object_access(file_uuid, access_id):
     query_params = app.current_request.query_params or {}
-    validate_params(query_params, version=str)
     return app.drs_controller.get_object_access(access_id, file_uuid, query_params)
 
 
@@ -2653,9 +2386,6 @@ def dos_get_data_object(file_uuid):
     Return a DRS data object dictionary for a given DSS file UUID and version.
     """
     query_params = app.current_request.query_params or {}
-    validate_params(query_params,
-                    version=str,
-                    catalog=IndexName.validate_catalog_name)
     catalog = app.catalog
     file_version = query_params.get('version')
     return app.drs_controller.dos_get_object(catalog, file_uuid, file_version)
