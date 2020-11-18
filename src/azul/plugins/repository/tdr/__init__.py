@@ -1,8 +1,8 @@
 from collections import (
     defaultdict,
 )
-from concurrent.futures.thread import (
-    ThreadPoolExecutor,
+from functools import (
+    lru_cache,
 )
 import datetime
 from itertools import (
@@ -16,7 +16,6 @@ from operator import (
 import time
 from typing import (
     Any,
-    ClassVar,
     Dict,
     List,
     Optional,
@@ -160,14 +159,19 @@ class Plugin(RepositoryPlugin):
             SELECT links_id, version
             FROM {self._full_table_name('links')}
             WHERE STARTS_WITH(links_id, '{prefix}')
-        ''', group_by='links_id')
+        ''', group_by=('links_id',))
         return [BundleFQID(uuid=row['links_id'],
                            version=self.format_version(row['version']))
                 for row in current_bundles]
 
-    def _query_latest_version(self, query: str, group_by: str) -> List[BigQueryRow]:
+    def _query_latest_version(self,
+                              query: str,
+                              group_by: Sequence[str]
+                              ) -> List[BigQueryRow]:
+        assert not isinstance(group_by, str), \
+            "Use `group_by=('foo',)`, not `group_by='foo'`"
         iter_rows = self._run_sql(query)
-        key = itemgetter(group_by)
+        key = itemgetter(*group_by)
         groups = groupby(sorted(iter_rows, key=key), key=key)
         return [self._choose_one_version(group) for _, group in groups]
 
@@ -184,23 +188,12 @@ class Plugin(RepositoryPlugin):
                            manifest=[],
                            metadata_files={})
         entities, links_jsons = self._stitch_bundles(bundle_fqid)
-        bundle.add_entity('links.json', 'links', self._merge_links(links_jsons))
-
-        with ThreadPoolExecutor(max_workers=config.num_tdr_workers) as executor:
-            futures = {
-                entity_type: executor.submit(self._retrieve_entities, entity_type, entity_ids)
-                for entity_type, entity_ids in entities.items()
-            }
-            for entity_type, future in futures.items():
-                e = future.exception()
-                if e is None:
-                    rows = future.result()
-                    for i, row in enumerate(rows):
-                        bundle.add_entity(f'{entity_type}_{i}.json', entity_type, row)
-                else:
-                    log.error('TDR worker failed to retrieve entities of type %r',
-                              entity_type, exc_info=e)
-                    raise e
+        bundle.add_entity('links.json', self._merge_links(links_jsons))
+        # Already sorted by entity_type
+        for entity_type, rows in groupby(self._retrieve_entities(entities),
+                                         itemgetter('entity_type')):
+            for i, row in enumerate(rows):
+                bundle.add_entity(f'{entity_type}_{i}.json', row)
 
         return bundle
 
@@ -253,11 +246,8 @@ class Plugin(RepositoryPlugin):
 
         :param links_id: Which links entity to retrieve.
         """
-        links_columns = ', '.join(
-            TDRBundle.metadata_columns | {'project_id', 'links_id'}
-        )
         links = one(self._run_sql(f'''
-            SELECT {links_columns}
+            SELECT {", ".join(TDRBundle.columns('links'))}
             FROM {self._full_table_name('links')}
             WHERE links_id = '{links_id.uuid}'
                 AND version = TIMESTAMP('{links_id.version}')
@@ -267,28 +257,30 @@ class Plugin(RepositoryPlugin):
         return links
 
     def _retrieve_entities(self,
-                           entity_type: EntityType,
-                           entity_ids: Set[EntityID]
+                           entities: EntitiesByType,
                            ) -> BigQueryRows:
-        pk_column = entity_type + '_id'
-        non_pk_columns = (TDRBundle.data_columns
-                          if entity_type.endswith('_file')
-                          else TDRBundle.metadata_columns)
-        columns = ', '.join({pk_column, *non_pk_columns})
-        uuid_in_list = ' OR '.join(
-            f'{pk_column} = "{entity_id}"' for entity_id in entity_ids
-        )
-        table_name = self._full_table_name(entity_type)
-        log.debug('Retrieving %i entities of type %r ...', len(entity_ids), entity_type)
-        rows = self._query_latest_version(f'''
-                       SELECT {columns}
-                       FROM {table_name}
-                       WHERE {uuid_in_list}
-                   ''', group_by=pk_column)
-        log.debug('Retrieved %i entities of type %r', len(rows), entity_type)
-        missing = entity_ids - {row[pk_column] for row in rows}
-        require(not missing,
-                f'Required entities not found in {table_name}: {missing}')
+        metadata_subqueries = []
+        file_subqueries = []
+        for entity_type, entity_ids in entities.items():
+            log.debug('Retrieving %i entities of type %r ...', len(entity_ids), entity_type)
+            (file_subqueries
+             if entity_type.endswith('_file')
+             else metadata_subqueries).append(f'''(
+                SELECT {', '.join(TDRBundle.columns(entity_type))}
+                FROM {self._full_table_name(entity_type)}
+                WHERE {' OR '.join(f"{entity_type}_id = '{entity_id}'"
+                                   for entity_id in entity_ids)}
+            )''')
+        rows = []
+        for subqueries in (metadata_subqueries, file_subqueries):
+            rows.extend(self._query_latest_version('UNION ALL'.join(subqueries),
+                                                   group_by=('entity_type', 'entity_id')))
+        retrieved_ids = {row['entity_id'] for row in rows}
+        for entity_type, entity_ids in entities.items():
+            log.debug('Retrieved %i entities of type %r', len(rows), entity_type)
+            missing = entity_ids - retrieved_ids
+            require(not missing,
+                    f'Required {entity_type} entities not found in {self._source}: {missing}')
         return rows
 
     def _parse_links(self,
@@ -384,9 +376,9 @@ class Plugin(RepositoryPlugin):
         """
         root, *stitched = links_jsons
         if stitched:
-            merged = {'links_id': root['links_id'],
+            merged = {'entity_id': root['entity_id'],
                       'version': root['version']}
-            for common_key in ('project_id', 'schema_type'):
+            for common_key in ('entity_type', 'project_id', 'schema_type'):
                 merged[common_key] = one({row[common_key] for row in links_jsons})
             merged_content = {}
             source_contents = [row['content'] for row in links_jsons]
@@ -396,12 +388,11 @@ class Plugin(RepositoryPlugin):
                                           start=[])
             merged['content'] = merged_content  # Keep result of parsed JSON for reuse
             merged['content_size'] = len(json.dumps(merged_content))
-            assert merged.keys() == one({
-                frozenset(row.keys()) for row in links_jsons
-            }), merged
-            assert merged_content.keys() == one({
-                frozenset(sc.keys()) for sc in source_contents
-            }), merged_content
+            keys = one({frozenset(row.keys()) for row in links_jsons})
+            assert merged.keys() == keys, (merged.keys(), keys)
+            content_keys = one({frozenset(sc.keys()) for sc in source_contents})
+            assert merged_content.keys() == content_keys, (merged_content.keys(),
+                                                           content_keys)
             return merged
         else:
             return root
@@ -503,15 +494,15 @@ class Checksums:
 class TDRBundle(Bundle):
     source: TDRSource
 
-    def add_entity(self, entity_key: str, entity_type: EntityType, entity_row: BigQueryRow) -> None:
-        entity_id = entity_row[entity_type + '_id']
+    def add_entity(self, entity_key: str, entity_row: BigQueryRow) -> None:
+        schema_type = entity_row['schema_type']
         self._add_manifest_entry(name=entity_key,
-                                 uuid=entity_id,
+                                 uuid=entity_row['entity_id'],
                                  version=Plugin.format_version(entity_row['version']),
                                  size=entity_row['content_size'],
                                  content_type='application/json',
-                                 dcp_type=f'"metadata/{entity_row["schema_type"]}"')
-        if entity_type.endswith('_file'):
+                                 dcp_type=f'"metadata/{schema_type}"')
+        if schema_type == 'file':
             descriptor = json.loads(entity_row['descriptor'])
             self._add_manifest_entry(name=entity_row['file_name'],
                                      uuid=descriptor['file_id'],
@@ -526,18 +517,26 @@ class TDRBundle(Bundle):
                                            if isinstance(content, str)
                                            else content)
 
-    metadata_columns: ClassVar[Set[str]] = {
-        'version',
-        'JSON_EXTRACT_SCALAR(content, "$.schema_type") AS schema_type',
-        'BYTE_LENGTH(content) AS content_size',
-        'content'
-    }
-
-    data_columns: ClassVar[Set[str]] = metadata_columns | {
-        'descriptor',
-        'JSON_EXTRACT_SCALAR(content, "$.file_core.file_name") AS file_name',
-        'file_id'
-    }
+    @classmethod
+    @lru_cache
+    def columns(cls, entity_type: EntityType) -> Sequence[str]:
+        # BigQuery UNION combines columns based on *order*, not name, so these
+        # must have consistent order.
+        return (
+            f'{entity_type}_id AS entity_id',
+            f'"{entity_type}" AS entity_type',
+            'version',
+            'JSON_EXTRACT_SCALAR(content, "$.schema_type") AS schema_type',
+            'BYTE_LENGTH(content) AS content_size',
+            'content',
+            *((
+                  'project_id',
+              ) if entity_type == 'links' else (
+                'descriptor',
+                'JSON_EXTRACT_SCALAR(content, "$.file_core.file_name") AS file_name',
+                'file_id'
+            ) if entity_type.endswith('_file') else ())
+        )
 
     def drs_path(self, manifest_entry: JSON) -> Optional[str]:
         return manifest_entry.get('drs_path')
