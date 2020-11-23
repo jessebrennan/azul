@@ -1,9 +1,6 @@
 from collections import (
     defaultdict,
 )
-from functools import (
-    lru_cache,
-)
 import datetime
 from itertools import (
     groupby,
@@ -41,6 +38,7 @@ from more_itertools import (
 from azul import (
     CatalogName,
     RequirementError,
+    cache,
     cached_property,
     config,
     reject,
@@ -189,13 +187,33 @@ class Plugin(RepositoryPlugin):
                            metadata_files={})
         entities, links_jsons = self._stitch_bundles(bundle_fqid)
         bundle.add_entity('links.json', self._merge_links(links_jsons))
-        # Already sorted by entity_type
+        # Already sorted because _retrieve_entities segregates by entity_type
         for entity_type, rows in groupby(self._retrieve_entities(entities),
                                          itemgetter('entity_type')):
             for i, row in enumerate(rows):
                 bundle.add_entity(f'{entity_type}_{i}.json', row)
 
         return bundle
+
+    @cache
+    def columns(self, entity_type: EntityType) -> Sequence[str]:
+        # BigQuery UNION combines columns based on *order*, not name, so these
+        # must have consistent order.
+        return (
+            f'{entity_type}_id AS entity_id',
+            f'"{entity_type}" AS entity_type',
+            'version',
+            'JSON_EXTRACT_SCALAR(content, "$.schema_type") AS schema_type',
+            'BYTE_LENGTH(content) AS content_size',
+            'content',
+            *((
+                  'project_id',
+              ) if entity_type == 'links' else (
+                'descriptor',
+                'JSON_EXTRACT_SCALAR(content, "$.file_core.file_name") AS file_name',
+                'file_id'
+            ) if entity_type.endswith('_file') else ())
+        )
 
     def _stitch_bundles(self,
                         root_bundle: BundleFQID
@@ -247,7 +265,7 @@ class Plugin(RepositoryPlugin):
         :param links_id: Which links entity to retrieve.
         """
         links = one(self._run_sql(f'''
-            SELECT {", ".join(TDRBundle.columns('links'))}
+            SELECT {", ".join(self.columns('links'))}
             FROM {self._full_table_name('links')}
             WHERE links_id = '{links_id.uuid}'
                 AND version = TIMESTAMP('{links_id.version}')
@@ -261,16 +279,17 @@ class Plugin(RepositoryPlugin):
                            ) -> BigQueryRows:
         metadata_subqueries = []
         file_subqueries = []
+        log.debug('Retrieving entities: %r',
+                  {entity_type: len(entity_ids) for entity_type, entity_ids in entities.items()})
         for entity_type, entity_ids in entities.items():
-            log.debug('Retrieving %i entities of type %r ...', len(entity_ids), entity_type)
             (file_subqueries
              if entity_type.endswith('_file')
-             else metadata_subqueries).append(f'''(
-                SELECT {', '.join(TDRBundle.columns(entity_type))}
+             else metadata_subqueries).append(f'''
+                SELECT {', '.join(self.columns(entity_type))}
                 FROM {self._full_table_name(entity_type)}
                 WHERE {' OR '.join(f"{entity_type}_id = '{entity_id}'"
                                    for entity_id in entity_ids)}
-            )''')
+            ''')
         rows = []
         for subqueries in (metadata_subqueries, file_subqueries):
             rows.extend(self._query_latest_version('UNION ALL'.join(subqueries),
@@ -376,8 +395,10 @@ class Plugin(RepositoryPlugin):
         """
         root, *stitched = links_jsons
         if stitched:
-            merged = {'entity_id': root['entity_id'],
-                      'version': root['version']}
+            merged = {
+                'entity_id': root['entity_id'],
+                'version': root['version']
+            }
             for common_key in ('entity_type', 'project_id', 'schema_type'):
                 merged[common_key] = one({row[common_key] for row in links_jsons})
             merged_content = {}
@@ -517,27 +538,6 @@ class TDRBundle(Bundle):
                                            if isinstance(content, str)
                                            else content)
 
-    @classmethod
-    @lru_cache
-    def columns(cls, entity_type: EntityType) -> Sequence[str]:
-        # BigQuery UNION combines columns based on *order*, not name, so these
-        # must have consistent order.
-        return (
-            f'{entity_type}_id AS entity_id',
-            f'"{entity_type}" AS entity_type',
-            'version',
-            'JSON_EXTRACT_SCALAR(content, "$.schema_type") AS schema_type',
-            'BYTE_LENGTH(content) AS content_size',
-            'content',
-            *((
-                  'project_id',
-              ) if entity_type == 'links' else (
-                'descriptor',
-                'JSON_EXTRACT_SCALAR(content, "$.file_core.file_name") AS file_name',
-                'file_id'
-            ) if entity_type.endswith('_file') else ())
-        )
-
     def drs_path(self, manifest_entry: JSON) -> Optional[str]:
         return manifest_entry.get('drs_path')
 
@@ -586,3 +586,7 @@ class TDRBundle(Bundle):
             return str(file_id.path).strip('/')
         else:
             return None
+
+    @classmethod
+    def columns(cls, param):
+        pass

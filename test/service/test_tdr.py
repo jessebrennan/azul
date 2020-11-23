@@ -438,6 +438,11 @@ class TestPlugin(tdr.Plugin):
         self._tinyquery = tinyquery
 
     def _run_sql(self, query: str) -> BigQueryRows:
+        # FIXME https://github.com/DataBiosphere/azul/issues/2501
+        #       https://cloud.google.com/bigquery/docs/reference/legacy-sql#comma-as-union-all
+        #       In order for this hack to work, unioned queries must be parenthesized
+        if 'UNION ALL' in query:
+            query = f"SELECT * FROM {query.replace('UNION ALL', ', ')}"
         columns = self._tinyquery.evaluate_query(query).columns
         num_rows = one(set(map(lambda c: len(c.values), columns.values())))
         for i in range(num_rows):
