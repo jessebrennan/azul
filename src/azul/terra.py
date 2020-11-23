@@ -107,6 +107,12 @@ class TDRSource:
     def bq_name(self):
         return self.name if self.is_snapshot else f'datarepo_{self.name}'
 
+    def fq_tablename(self, table: str) -> str:
+        """
+        Fully qualified name of a table from this source.
+        """
+        return f'{self.project}.{self.bq_name}.{table}'
+
     def __str__(self) -> str:
         source_type = self._type_snapshot if self.is_snapshot else self._type_dataset
         return f'tdr:{self.project}:{source_type}/{self.name}'
@@ -126,7 +132,7 @@ class TerraClient:
         with aws.service_account_credentials() as file_name:
             return Credentials.from_service_account_file(file_name)
 
-    @cached_property
+    @property
     def service_account_project(self):
         return self.credentials.project_id
 
