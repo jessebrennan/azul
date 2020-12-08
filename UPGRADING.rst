@@ -10,6 +10,18 @@ branch that does not have the listed changes, the steps would need to be
 reverted. This is all fairly informal and loosely defined. Hopefully we won't
 have too many entries in this file.
 
+#2399 Reduce portal DB IT concurrency
+=====================================
+
+Delete the existing portal database files ::
+
+    s3://edu-ucsc-gi-singlecell-azul-config-dev.us-east-1/azul/{your-deployment}/portals/*.json
+
+and their corresponding entries in the DynamoDB object version table ::
+
+    azul-object_versions-{your-deployment}
+
+To ensure that no pollution persists from previous IT failures due to #2400.
 
 #2246 Add deployment incarnation counter
 ========================================
