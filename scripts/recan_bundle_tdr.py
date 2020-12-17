@@ -54,6 +54,7 @@ from azul.plugins.repository.dss import (
 )
 from azul.plugins.repository.tdr import (
     TDRBundle,
+    link_sort_key,
 )
 from azul.terra import (
     TDRSource,
@@ -143,7 +144,8 @@ def dss_bundle_to_tdr(bundle: Bundle, source: TDRSource, source_uuid: str) -> TD
 
     links_json = metadata['links.json']
     links_json['schema_type'] = 'links'  # DCP/1 uses 'link_bundle'
-    for link in links_json['links']:
+    links = links_json['links']
+    for link in links:
         process_id = link.pop('process')
         link['process_id'] = process_id
         link['process_type'] = find_concrete_type(bundle, find_file_name(bundle, process_id))
@@ -158,6 +160,8 @@ def dss_bundle_to_tdr(bundle: Bundle, source: TDRSource, source_uuid: str) -> TD
                 }
                 for component_id in component_list
             ]
+    # Ensure deterministic ordering for subgraph stitching
+    links.sort(key=link_sort_key)
 
     manifest: MutableJSONs = copy_jsons(bundle.manifest)
     links_entry = None
