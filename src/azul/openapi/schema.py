@@ -3,6 +3,7 @@ from typing import (
     Mapping,
     NamedTuple,
     Optional,
+    Sequence,
     Type,
     TypeVar,
     Union,
@@ -138,7 +139,7 @@ def array(item: TYPE, *items: TYPE, **kwargs):
     return array_type(make_type(item), *map(make_type, items), **kwargs)
 
 
-def enum(*items: PrimitiveJSON, type_: TYPE = None) -> JSON:
+def enum(*items: PrimitiveJSON, items_: Sequence[str] = None, type_: TYPE = None) -> JSON:
     """
     Returns an `enum` schema for the given items. By default, the schema type of
     the items is inferred, but a type may be passed explicitly to override that.
@@ -192,8 +193,31 @@ def enum(*items: PrimitiveJSON, type_: TYPE = None) -> JSON:
             "bar"
         ]
     }
-    """
 
+    >>> assert_json(enum(items_=['a']))
+    {
+        "type": "string",
+        "enum": [
+            "a"
+        ]
+    }
+    >>> assert_json(enum('a', items_=['b']))
+    Traceback (most recent call last):
+    ...
+    azul.RequirementError
+    """
+    if items_ is None:
+        # jsonschema validator package rejects tuples, so convert to list.
+        items = list(items)
+    else:
+        require(items == ())
+        # TODO: This isinstance check needs to be more loose. It should
+        #       allow mappings as well.
+        #       https://github.com/DataBiosphere/azul/issues/2375
+        # noinspection PyUnreachableCode
+        if False:
+            require(isinstance(items_, list))
+        items = items_
     if isinstance(type_, type):
         assert all(isinstance(item, type_) for item in items)
     else:
