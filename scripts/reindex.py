@@ -3,6 +3,10 @@ Command line utility to trigger indexing of bundles from DSS into Azul
 """
 
 import argparse
+from collections import (
+    defaultdict,
+)
+import fnmatch
 import logging
 import sys
 from typing import (
@@ -14,6 +18,7 @@ from args import (
 )
 from azul import (
     config,
+    require,
 )
 from azul.azulclient import (
     AzulClient,
@@ -58,6 +63,12 @@ parser.add_argument('--catalogs',
                     ],
                     choices=config.catalogs,
                     help='The names of the catalogs to reindex.')
+parser.add_argument('--sources',
+                    default=config.reindex_sources,
+                    nargs='+',
+                    help='Limit remote reindexing to a subset of the configured sources. '
+                         'Supports shell-style * globbing to match multiple sources per argument.'
+                         'Must be * for local reindexing i.e., if --partition-prefix-length is not given.')
 parser.add_argument('--delete',
                     default=False,
                     action='store_true',
@@ -98,6 +109,34 @@ def main(argv: List[str]):
 
     azul = AzulClient(num_workers=args.num_workers)
 
+    source_globs = set(args.sources)
+    if args.partition_prefix_length:
+        sources_by_catalog = defaultdict(set)
+        globs_matched = set()
+        for catalog in args.catalogs:
+            sources = azul.catalog_sources(catalog)
+            for source_glob in source_globs:
+                matches = fnmatch.filter(sources, source_glob)
+                if matches:
+                    globs_matched.add(source_glob)
+                logger.debug('Source glob %r matched sources %r in catalog %r',
+                             source_glob, matches, catalog)
+                sources_by_catalog[catalog].update(matches)
+        unmatched = source_globs - globs_matched
+        if unmatched:
+            logger.warning('Source(s) not found in any catalog: %r', unmatched)
+        require(any(sources_by_catalog.values()),
+                'No valid sources specified for any catalog')
+    else:
+        if source_globs == {'*'}:
+            sources_by_catalog = {
+                catalog: azul.catalog_sources(catalog)
+                for catalog in args.catalogs
+            }
+        else:
+            parser.error('Cannot specify sources when performing a local reindex')
+            assert False
+
     azul.reset_indexer(args.catalogs,
                        purge_queues=args.purge,
                        delete_indices=args.delete,
@@ -106,12 +145,15 @@ def main(argv: List[str]):
     if args.index:
         logger.info('Queuing notifications for reindexing ...')
         num_notifications = 0
-        for catalog in args.catalogs:
-            if args.partition_prefix_length:
-                azul.remote_reindex(catalog, args.prefix, args.partition_prefix_length)
-                num_notifications = None
+        for catalog, sources in sources_by_catalog.items():
+            if sources:
+                if args.partition_prefix_length:
+                    azul.remote_reindex(catalog, args.prefix, args.partition_prefix_length, sources)
+                    num_notifications = None
+                else:
+                    num_notifications += azul.reindex(catalog, args.prefix)
             else:
-                num_notifications += azul.reindex(catalog, args.prefix)
+                logger.info('Skipping catalog %r (no matching sources)', catalog)
         if args.wait:
             if num_notifications == 0:
                 logger.warning('No notifications for prefix %r and catalogs %r were sent',
