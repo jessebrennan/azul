@@ -25,6 +25,7 @@ branches:
   #
   # https://github.com/travis-ci/travis-ci/issues/1147
   only:
+    - issues/amar/1465-schema-updates
     - develop
     - integration
     - staging
