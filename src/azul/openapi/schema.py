@@ -14,6 +14,7 @@ from more_itertools import (
 )
 
 from azul import (
+    reject,
     require,
 )
 from azul.types import (
@@ -139,7 +140,7 @@ def array(item: TYPE, *items: TYPE, **kwargs):
     return array_type(make_type(item), *map(make_type, items), **kwargs)
 
 
-def enum(*items: PrimitiveJSON, items_: Sequence[str] = None, type_: TYPE = None) -> JSON:
+def enum(*items_: PrimitiveJSON, items: Sequence[str] = None, type_: TYPE = None) -> JSON:
     """
     Returns an `enum` schema for the given items. By default, the schema type of
     the items is inferred, but a type may be passed explicitly to override that.
@@ -194,29 +195,30 @@ def enum(*items: PrimitiveJSON, items_: Sequence[str] = None, type_: TYPE = None
         ]
     }
 
-    >>> assert_json(enum(items_=['a']))
+    >>> assert_json(enum(items=['a']))
     {
         "type": "string",
         "enum": [
             "a"
         ]
     }
-    >>> assert_json(enum('a', items_=['b']))
+    >>> assert_json(enum('a', items=['b']))
     Traceback (most recent call last):
     ...
     azul.RequirementError
     """
-    if items_ is None:
+    if items_ != ():
+        require(items is None)
         # jsonschema validator package rejects tuples, so convert to list.
-        items = list(items)
+        items = list(items_)
     else:
-        require(items == ())
+        reject(items is None)
         # TODO: This isinstance check needs to be more loose. It should
         #       allow mappings as well.
         #       https://github.com/DataBiosphere/azul/issues/2375
         # noinspection PyUnreachableCode
         if False:
-            require(isinstance(items_, list))
+            require(isinstance(items, list))
         items = items_
     if isinstance(type_, type):
         assert all(isinstance(item, type_) for item in items)
