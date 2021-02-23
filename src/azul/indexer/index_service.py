@@ -442,9 +442,11 @@ class IndexService(DocumentService):
                      version=c.coordinates.bundle.version)
                 for c in contributions
             ]
+            source = set(c.source for c in contributions)
             aggregate_cls = self.aggregate_class(entity.catalog)
             aggregate = aggregate_cls(coordinates=AggregateCoordinates(entity=entity),
                                       version=None,
+                                      sources=source,
                                       contents=contents,
                                       bundles=bundles,
                                       num_contributions=tallies[entity])

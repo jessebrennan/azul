@@ -978,6 +978,7 @@ class BaseTransformer(Transformer, metaclass=ABCMeta):
                                               deleted=self.deleted)
         return Contribution(coordinates=coordinates,
                             version=None,
+                            source=self.bundle.fqid.source,
                             contents=contents)
 
     @classmethod
