@@ -183,7 +183,10 @@ class Plugin(MetadataPlugin):
                 "bundleUuid": "bundles.uuid",
                 "bundleVersion": "bundles.version",
 
-                "entryId": "entity_id"
+                "entryId": "entity_id",
+
+                "sourceId": "source_id",
+                "sourceName": "source_name",
             },
             autocomplete_translation={
                 "files": {

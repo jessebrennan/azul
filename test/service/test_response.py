@@ -167,6 +167,10 @@ class TestResponse(WebServiceTestCase):
                         }
                     ],
                     "entryId": "0c5ac7c0-817e-40d4-b1b1-34c3d5cfecdb",
+                    "sources": [{
+                        "sourceId": "4b737739-4dc9-5d4b-9989-a4942047c91c",
+                        "sourceName": "test"
+                    }],
                     "files": [
                         {
                             "content_description": [None],
@@ -307,6 +311,10 @@ class TestResponse(WebServiceTestCase):
                             "source": "specimen_from_organism",
                         }
                     ],
+                    "sources": [{
+                        "sourceId": "4b737739-4dc9-5d4b-9989-a4942047c91c",
+                        "sourceName": "test"
+                    }],
                     "specimens": [
                         {
                             "disease": ["normal"],
@@ -435,6 +443,10 @@ class TestResponse(WebServiceTestCase):
                         ]
                     }
                 ],
+                "sources": [{
+                    "sourceId": "4b737739-4dc9-5d4b-9989-a4942047c91c",
+                    "sourceName": "test"
+                }],
                 "specimens": [
                     {
                         "disease": ["normal"],
@@ -780,6 +792,10 @@ class TestResponse(WebServiceTestCase):
                             ]
                         }
                     ],
+                    "sources": [{
+                        "sourceId": "4b737739-4dc9-5d4b-9989-a4942047c91c",
+                        "sourceName": "test"
+                    }],
                     "specimens": [
                         {
                             "disease": ["normal"],
@@ -949,6 +965,10 @@ class TestResponse(WebServiceTestCase):
                             ]
                         }
                     ],
+                    "sources": [{
+                        "sourceId": "4b737739-4dc9-5d4b-9989-a4942047c91c",
+                        "sourceName": "test"
+                    }],
                     "specimens": [
                         {
                             "disease": ["normal"],
@@ -1165,6 +1185,10 @@ class TestResponse(WebServiceTestCase):
                             ]
                         }
                     ],
+                    "sources": [{
+                        "sourceId": "4b737739-4dc9-5d4b-9989-a4942047c91c",
+                        "sourceName": "test"
+                    }],
                     "specimens": [
                         {
                             "disease": ["H syndrome"],
