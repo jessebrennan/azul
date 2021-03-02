@@ -41,7 +41,6 @@ import time
 from typing import (
     Any,
     IO,
-    Iterable,
     List,
     Mapping,
     MutableMapping,
@@ -897,22 +896,23 @@ class CompactManifestGenerator(StreamingManifestGenerator):
             for bundle in list(doc['bundles'])[0:100]:  # iterate over copy …
                 doc['bundles'] = [bundle]  # … to facilitate this in-place modification
                 row = {}
+                related_rows = []
                 for doc_path, column_mapping in self.manifest_config.items():
                     entities = self._get_entities(doc_path, doc)
                     self._extract_fields(entities, column_mapping, row)
+                    if doc_path == 'contents.files':
+                        entity = one(entities)
+                        if 'related_files' in entity:
+                            for file in entity['related_files']:
+                                related_row = {}
+                                entity.update(file)
+                                self._extract_fields([entity], column_mapping, related_row)
+                                related_rows.append(related_row)
                 writer.writerow(row)
-                writer.writerows(self._get_related_rows(doc, row))
+                for related in related_rows:
+                    row.update(related)
+                    writer.writerow(row)
         return None
-
-    def _get_related_rows(self, doc: dict, row: dict) -> Iterable[dict]:
-        file_ = one(doc['contents']['files'])
-        for related in file_['related_files']:
-            # FIXME: Properly provision related_files in row
-            #        https://github.com/DataBiosphere/azul/issues/2846
-            del related['drs_path']
-            new_row = row.copy()
-            new_row.update({'file_' + k: v for k, v in related.items()})
-            yield new_row
 
 
 class FullManifestGenerator(StreamingManifestGenerator):
