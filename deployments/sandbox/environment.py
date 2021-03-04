@@ -96,7 +96,7 @@ def env() -> Mapping[str, Optional[str]]:
             }
         ),
 
-        'azul_dss_query_prefix': '42',
+        'AZUL_DSS_QUERY_PREFIX': '42',
 
         'AZUL_DEBUG': '1',
 

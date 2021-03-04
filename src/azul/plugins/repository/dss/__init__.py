@@ -57,6 +57,9 @@ from azul.types import (
     MutableJSON,
     MutableJSONs,
 )
+from azul.uuids import (
+    validate_uuid_prefix,
+)
 
 log = logging.getLogger(__name__)
 
@@ -93,11 +96,17 @@ class Plugin(RepositoryPlugin[DSSSourceRef, SimpleSourceName]):
     def dss_client(self):
         return client(dss_endpoint=config.dss_endpoint)
 
+    @cached_property
+    def prefix(self) -> str:
+        return config.dss_query_prefix
+
     def _assert_source(self, source):
         assert self.sources == {source}, (self.sources, source)
 
     def list_bundles(self, source: DSSSourceRef, prefix: str) -> List[DSSBundleFQID]:
         self._assert_source(source)
+        prefix = self.prefix + prefix
+        validate_uuid_prefix(prefix)
         log.info('Listing bundles with prefix %r in source %r.', prefix, source)
         bundle_fqids = []
         response = self.dss_client.get_bundles_all.iterate(prefix=prefix,

@@ -100,7 +100,6 @@ class AzulClient(object):
         # Organic notifications sent by DSS wouldn't contain the `source` entry,
         # but since DSS is end-of-life these synthetic notifications are now the
         # only variant that would ever occur in the wild.
-        assert bundle_fqid.uuid.startswith(prefix)
         return {
             'source': {
                 'id': bundle_fqid.source.id,
@@ -229,11 +228,9 @@ class AzulClient(object):
 
     def remote_reindex(self,
                        catalog: CatalogName,
-                       prefix: str,
                        partition_prefix_length: int):
-        validate_uuid_prefix(prefix)
         partition_prefixes = [
-            prefix + ''.join(partition_prefix)
+            ''.join(partition_prefix)
             for partition_prefix in product('0123456789abcdef',
                                             repeat=partition_prefix_length)
         ]
@@ -263,8 +260,8 @@ class AzulClient(object):
         bundle_fqids = self.list_bundles(catalog, source, prefix)
         bundle_fqids = self.filter_obsolete_bundle_versions(bundle_fqids)
         logger.info('After filtering obsolete versions, '
-                    '%i bundles remain in prefix %r of catalog %r',
-                    len(bundle_fqids), prefix, catalog)
+                    '%i bundles remain in prefix %r of source %r in catalog %r',
+                    len(bundle_fqids), prefix, source, catalog)
         messages = (
             {
                 'action': 'add',
@@ -283,7 +280,8 @@ class AzulClient(object):
             ]
             self.notifications_queue.send_messages(Entries=entries)
             num_messages += len(batch)
-        logger.info('Successfully queued %i notification(s) for prefix %s', num_messages, prefix)
+        logger.info('Successfully queued %i notification(s) for prefix %s of '
+                    'source %r', num_messages, prefix, source)
 
     @classmethod
     def filter_obsolete_bundle_versions(cls,
