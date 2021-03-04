@@ -53,19 +53,21 @@ def env() -> Mapping[str, Optional[str]]:
         ]),
 
         'AZUL_TDR_SOURCES': ','.join([
-            'tdr:broad-jade-dev-data:snapshot/hca_dev_20201203___20210219',
+            'tdr:broad-jade-dev-data:snapshot/hca_dev_20201203___20210219:',
         ]),
         **{
-            f'AZUL_TDR_{catalog.upper()}_SOURCES': ','.join([
-                'tdr:broad-jade-dev-data:snapshot/hca_dev_20201023_ebiv4___20210302'
+            f'AZUL_TDR_{"dcp2ebi".upper()}_SOURCES': ','.join([
+                'tdr:broad-jade-dev-data:snapshot/hca_dev_20201023_ebiv4___20210302:42'
+            ]),
+            f'AZUL_TDR_{"it2ebi".upper()}_SOURCES': ','.join([
+                'tdr:broad-jade-dev-data:snapshot/hca_dev_20201023_ebiv4___20210302:'
+            ]),
+            f'AZUL_TDR_{"lungmap".upper()}_SOURCES': ','.join([
+                'tdr:broad-jade-dev-data:snapshot/lungmap_dev_20210203___20210204:42',
+            ]),
+            f'AZUL_TDR_{"it3lungmap".upper()}_SOURCES': ','.join([
+                'tdr:broad-jade-dev-data:snapshot/lungmap_dev_20210203___20210204:',
             ])
-            for catalog in ('dcp2ebi', 'it2ebi')
-        },
-        **{
-            f'AZUL_TDR_{catalog.upper()}_SOURCES': ','.join([
-                'tdr:broad-jade-dev-data:snapshot/lungmap_dev_20210203___20210204',
-            ])
-            for catalog in ('lungmap', 'it3lungmap')
         },
         'AZUL_TDR_SERVICE_URL': 'https://jade.datarepo-dev.broadinstitute.org',
         'AZUL_SAM_SERVICE_URL': 'https://sam.dsde-dev.broadinstitute.org',
