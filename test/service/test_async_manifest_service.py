@@ -18,6 +18,7 @@ from moto import (
     mock_sts,
 )
 import requests
+import responses
 
 from app_test_case import (
     LocalAppTestCase,
@@ -44,9 +45,6 @@ from azul.service.step_function_helper import (
 )
 from azul_test_case import (
     AzulUnitTestCase,
-)
-from retorts import (
-    ResponsesHelper,
 )
 
 
@@ -201,7 +199,7 @@ class TestAsyncManifestServiceEndpoints(LocalAppTestCase):
         execution and return a response with Retry-After and Location in the
         headers.
         """
-        with ResponsesHelper() as helper:
+        with responses.RequestsMock() as helper:
             helper.add_passthru(self.base_url)
             for fetch in True, False:
                 with self.subTest(fetch=fetch):
