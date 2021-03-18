@@ -14,6 +14,10 @@ from typing import (
     cast,
 )
 
+from botocore.exceptions import (
+    ClientError,
+)
+
 from azul import (
     cached_property,
     config,
@@ -196,8 +200,11 @@ class PortalService:
             response = self.client.get_object(Bucket=self.bucket,
                                               Key=self.object_key,
                                               VersionId=version)
-        except self.client.exceptions.NoSuchKey:
-            raise NoSuchObjectVersion(version)
+        except ClientError as e:
+            if 'Invalid version id specified' in e.response['Error']['Message']:
+                raise NoSuchObjectVersion(version)
+            else:
+                raise e
         else:
             json_bytes = response['Body'].read()
             return json.loads(json_bytes.decode())
