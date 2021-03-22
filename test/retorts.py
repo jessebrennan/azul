@@ -42,7 +42,7 @@ class ResponsesHelper:
 
     >>> import moto
     >>> import requests
-    >>> @moto.mock_sts
+    >>> @responses.activate
     ... def test_foo():
     ...     with ResponsesHelper() as helper:
     ...         helper.add(responses.Response(method=responses.GET,
@@ -100,14 +100,32 @@ class ResponsesHelper:
         self.request_mock.passthru_prefixes = self.passthru_prefixes
 
 
-class AuthResponseHelper(ResponsesHelper):
+class AuthResponseHelper:
 
     def __init__(self, passthru_url: str = None, request_mock: responses.RequestsMock = None) -> None:
-        super().__init__(request_mock)
+        # noinspection PyProtectedMember
+        self.request_mock = responses._default_mock if request_mock is None else request_mock
+        self.mock_responses = None
+        self.passthru_prefixes = None
         self.passthru_url = passthru_url
 
+    def add(self, mock_response: responses.BaseResponse):
+        self.request_mock.add(mock_response)
+        self.mock_responses.append(mock_response)
+
+    def add_passthru(self, prefix):
+        self.request_mock.add_passthru(prefix)
+
     def __enter__(self):
-        context = super().__enter__()
+        patcher = getattr(self.request_mock, '_patcher', None)
+        # noinspection PyUnresolvedReferences,PyProtectedMember
+        assert patcher is not None and hasattr(patcher, 'is_local'), (
+            'This helper only works with `responses` already active. The '
+            'easiest way to achieve that is to use the `@responses.activate` '
+            'decorator or one or more of the moto decorators.'
+        )
+        self.mock_responses = []
+        self.passthru_prefixes = self.request_mock.passthru_prefixes
         if self.passthru_url is not None:
             self.add_passthru(self.passthru_url)
 
@@ -134,7 +152,12 @@ class AuthResponseHelper(ResponsesHelper):
                                             url=f'{config.access_token_issuer}/test/public-keys',
                                             callback=generate_test_public_keys,
                                             content_type='application/json'))
-        return context
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        for mock_response in self.mock_responses:
+            self.request_mock.remove(mock_response)
+        self.request_mock.passthru_prefixes = self.passthru_prefixes
 
     @staticmethod
     def generate_test_claims(email: str,
