@@ -40,7 +40,6 @@ import azul.time
 import azul.types
 import azul.uuids
 import azul.vendored.frozendict
-import retorts
 
 
 # noinspection PyPep8Naming
@@ -82,7 +81,6 @@ def load_tests(_loader, tests, _ignore):
         azul.types,
         azul.uuids,
         azul.vendored.frozendict,
-        retorts,
         load_app_module('service'),
         load_script('check_branch'),
         load_script('envhook'),
