@@ -13,6 +13,7 @@ from enum import (
 )
 import sys
 from typing import (
+    AbstractSet,
     Any,
     ClassVar,
     Generic,
@@ -232,6 +233,7 @@ class FieldType(Generic[N, T], metaclass=ABCMeta):
     shadowed: bool = False
     es_sort_mode: str = 'min'
     allow_sorting_by_empty_lists: bool = True
+    filter_operators: AbstractSet[str] = frozenset({'is'})
 
     @property
     @abstractmethod
@@ -271,6 +273,14 @@ pass_thru_bool: PassThrough[bool] = PassThrough(es_type='boolean')
 # FIXME: change the es_type for JSON to `nested`
 #        https://github.com/DataBiosphere/azul/issues/2621
 pass_thru_json: PassThrough[JSON] = PassThrough(es_type=None)
+
+
+# investigate if including `is` makes sense
+class Range(PassThrough[JSON]):
+    filter_operators = frozenset({'is', 'within', 'contains', 'intersects'})
+
+
+range_ = Range(es_type=None)
 
 
 class NullableString(FieldType[Optional[str], str]):
