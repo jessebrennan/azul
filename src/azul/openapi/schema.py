@@ -140,7 +140,9 @@ def array(item: TYPE, *items: TYPE, **kwargs):
     return array_type(make_type(item), *map(make_type, items), **kwargs)
 
 
-def enum(*items_: PrimitiveJSON, items: Sequence[str] = None, type_: TYPE = None) -> JSON:
+def enum(*items_: PrimitiveJSON,
+         items: Union[Sequence[str], Mapping] = None,
+         type_: TYPE = None) -> JSON:
     """
     Returns an `enum` schema for the given items. By default, the schema type of
     the items is inferred, but a type may be passed explicitly to override that.
@@ -206,6 +208,28 @@ def enum(*items_: PrimitiveJSON, items: Sequence[str] = None, type_: TYPE = None
     Traceback (most recent call last):
     ...
     azul.RequirementError
+    >>> enum(items={1:2,'foo':3})
+    Traceback (most recent call last):
+    ...
+    AssertionError
+    >>> assert_json(enum(items={1:2,2:3}))
+    {
+        "type": "integer",
+        "format": "int64",
+        "enum": [
+            1,
+            2
+        ]
+    }
+
+    >>> assert_json(enum(items=('a','b')))
+    {
+        "type": "string",
+        "enum": [
+            "a",
+            "b"
+        ]
+    }
     """
     if items_ != ():
         require(items is None)
@@ -213,13 +237,13 @@ def enum(*items_: PrimitiveJSON, items: Sequence[str] = None, type_: TYPE = None
         items = list(items_)
     else:
         reject(items is None)
-        # TODO: This isinstance check needs to be more loose. It should
-        #       allow mappings as well.
-        #       https://github.com/DataBiosphere/azul/issues/2375
-        # noinspection PyUnreachableCode
-        if False:
-            require(isinstance(items, list))
-        items = items_
+        if isinstance(items, Mapping):
+            items = list(items.keys())
+            # Mappings should have homogeneous keys
+            if type_ is None:
+                type_ = type(items[0])
+        elif not isinstance(items, list):
+            items = list(items)
     if isinstance(type_, type):
         assert all(isinstance(item, type_) for item in items)
     else:
@@ -227,7 +251,7 @@ def enum(*items_: PrimitiveJSON, items: Sequence[str] = None, type_: TYPE = None
         if type_ is None:
             type_ = inferred_type
         else:
-            # Can't easily verify type when passed as string or mapping
+            # Can't easily verify type when passed as string
             pass
 
     return {
