@@ -15,15 +15,22 @@ from more_itertools import (
     flatten,
     one,
 )
+from moto import (
+    mock_s3,
+)
 
 from app_test_case import (
     LocalAppTestCase,
 )
 from azul import (
+    cached_property,
     config,
 )
 from azul.indexer import (
     SourcedBundleFQID,
+)
+from azul.service.storage_service import (
+    StorageService,
 )
 from indexer import (
     IndexerTestCase,
@@ -120,3 +127,14 @@ class DSSUnitTestCase(TestCase):
     def tearDownClass(cls):
         cls._dss_mock.stop()
         super().tearDownClass()
+
+
+@mock_s3
+class StorageServiceTestCase(TestCase):
+    """
+    A mixin for test cases that utilize the StorageService.
+    """
+
+    @cached_property
+    def storage_service(self) -> StorageService:
+        return StorageService()
