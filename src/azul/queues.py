@@ -211,15 +211,13 @@ class Queues:
         """
         Wait for the work queues to reach a steady state.
         """
-        sleep_time = 5
+        sleep_time = 10
         queues = self.get_queues(config.work_queue_names)
-        total_lengths = deque(maxlen=15)
-        # One minute allotted for eventual consistency on SQS.
-        # For more info, read WARNING section on
+        total_lengths = deque(maxlen=12)
+        # Two minutes to safely accommodate SQS eventual consistency window of
+        # one minute. For more info, read WARNING section on
         # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html#SQS.Client.get_queue_attributes
-        assert total_lengths.maxlen * sleep_time >= 60
-
-        logger.info('Waiting for %s queue(s) to stabilize ...', len(queues))
+        assert total_lengths.maxlen * sleep_time >= 2 * 60
 
         while True:
             # Determine queue lengths
