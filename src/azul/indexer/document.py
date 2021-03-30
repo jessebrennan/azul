@@ -719,7 +719,7 @@ class Aggregate(Document[AggregateCoordinates]):
     def to_json(self) -> JSON:
         return dict(super().to_json(),
                     num_contributions=self.num_contributions,
-                    sources=[source.to_json() for source in sorted(self.sources)],
+                    sources=[source.to_json() for source in self.sources],
                     bundles=self.bundles)
 
     @property

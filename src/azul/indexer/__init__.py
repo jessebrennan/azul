@@ -53,7 +53,7 @@ class BundleFQID(SupportsLessThan):
 SOURCE_NAME = TypeVar('SOURCE_NAME', bound='SourceName')
 
 
-class SourceName(ABC, SupportsLessThan, Generic[SOURCE_NAME]):
+class SourceName(ABC, Generic[SOURCE_NAME]):
     """
     The name of a repository source containing bundles to index. A repository
     has at least one source. Repository plugins whose repository source names
@@ -70,9 +70,6 @@ class SourceName(ABC, SupportsLessThan, Generic[SOURCE_NAME]):
     def __str__(self) -> str:
         raise NotImplementedError
 
-    def __lt__(self, other):
-        return str(self) < str(other)
-
 
 class SimpleSourceName(str, SourceName['SimpleSourceName']):
     """
@@ -87,8 +84,8 @@ class SimpleSourceName(str, SourceName['SimpleSourceName']):
 SOURCE_REF = TypeVar('SOURCE_REF', bound='SourceRef')
 
 
-@attr.s(auto_attribs=True, frozen=True, kw_only=True, order=True)
-class SourceRef(SupportsLessThan, Generic[SOURCE_NAME, SOURCE_REF]):
+@attr.s(auto_attribs=True, frozen=True, kw_only=True)
+class SourceRef(Generic[SOURCE_NAME, SOURCE_REF]):
     """
     A reference to a repository source containing bundles to index. A repository
     has at least one source. A source is primarily referenced by its ID but we
