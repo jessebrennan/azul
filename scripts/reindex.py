@@ -67,7 +67,7 @@ parser.add_argument('--sources',
                     default=config.reindex_sources,
                     nargs='+',
                     help='Limit remote reindexing to a subset of the configured sources. '
-                         'Supports shell-style * globbing to match multiple sources per argument.'
+                         'Supports shell-style wildcards to match multiple sources per argument. '
                          'Must be * for local reindexing i.e., if --partition-prefix-length is not given.')
 parser.add_argument('--delete',
                     default=False,
