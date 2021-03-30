@@ -57,7 +57,7 @@ parser.add_argument('--partition-prefix-length',
                          'The lambda queries the repository and queues a notification for each matching bundle. If 0 '
                          '(the default) no partitioning occurs, the repository is queried locally and the indexer '
                          'notification endpoint is invoked for each bundle individually and concurrently using worker'
-                         'threads. This is magnitudes slower that partitioned indexing.')
+                         'threads. This is magnitudes slower than remote i.e., partitioned indexing.')
 parser.add_argument('--catalogs',
                     nargs='+',
                     metavar='NAME',
