@@ -96,8 +96,8 @@ class Plugin(RepositoryPlugin[DSSSourceRef, SimpleSourceName]):
     def dss_client(self):
         return client(dss_endpoint=config.dss_endpoint)
 
-    @cached_property
-    def prefix(self) -> str:
+    @staticmethod
+    def prefix() -> str:
         return config.dss_query_prefix
 
     def _assert_source(self, source):
