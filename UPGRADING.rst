@@ -14,15 +14,16 @@ have too many entries in this file.
 #2650 Add prefix to sources
 ===========================
 
-For non-main deployments unset the ``azul_dss_query_prefix`` variable.
+Remove the ``azul_dss_query_prefix`` variable from any ``environment.py``
+files for personal deployments.
 
 The syntax of ``AZUL_TDR_SOURCES`` and ``AZUL_TDR_…_SOURCES`` environment
 variables was modified to include a UUID prefix. To upgrade a
 deployment, append every source entry in the deployment's `environment.py`
 with a colon delimiter ``:`` followed by a valid hexadecimal prefix e.g.,
-``:42``. When selecting a prefix for an IT snapshot source on a non-main
-deployment, use an empty string, failure to do so may cause IT errors.
-As always, use the sandbox deployment's ``environment.py`` as a template.
+``:42``. For IT catalogs within a personal deployment set the source prefix to
+an empty string. Failure to do so may cause IT errors. As always, use the
+sandbox deployment's ``environment.py`` as a template.
 
 
 #2755 Change AZUL_TDR_SOURCE to AZUL_TDR_SOURCES
