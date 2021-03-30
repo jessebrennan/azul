@@ -20,6 +20,7 @@ from botocore.credentials import (
 import botocore.session
 from moto.core.models import (
     ACCOUNT_ID,
+    moto_api_backend,
 )
 
 from azul import (
@@ -157,6 +158,9 @@ class AzulUnitTestCase(AzulTestCase):
 
     def setUp(self) -> None:
         super().setUp()
+        # Moto backends are reset to ensure no resources are left over if a test
+        # fails to clean up after itself.
+        moto_api_backend.reset()
 
     catalog: CatalogName = 'test'
     catalog_config = f'hca:{catalog}:metadata/hca:repository/dss'
