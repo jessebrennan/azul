@@ -225,33 +225,6 @@
         "relations": []
     },
     {
-        "id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "application/gzip; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "54bb9c82",
-            "document_id": "70d1af4a-82c8-478a-8960-e9028b3616ca",
-            "drs_path": "74897eb7-0701-4e4f-9e6b-8b9521b2816b?version=2018-11-02T113344.450442Z",
-            "file_format": "fastq.gz",
-            "file_type": "sequence_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "SRR3562915_2.fastq.gz",
-            "read_index": "read2",
-            "related_files": [],
-            "sha256": "465a230aa127376fa641f8b8f8cad3f08fef37c8aafc67be454f0f0e4e63d68d",
-            "size": 190330156,
-            "source": "",
-            "uuid": "74897eb7-0701-4e4f-9e6b-8b9521b2816b",
-            "version": "2018-11-02T113344.450442Z"
-        },
-        "relations": []
-    },
-    {
         "id": "6a123efc-70f7-54b5-ab76-f3532ed9ab6b",
         "name": "samples",
         "object": {
@@ -301,16 +274,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "3ff3b505-85a5-5481-aff2-d15f6d4e3ba2",
@@ -326,16 +290,7 @@
                 "cell_suspension"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "3e4cf070-90a6-56ad-aa7e-72e8343d3fbf",
@@ -372,16 +327,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "3708c935-c56a-5e77-81ca-4dab0a79a1d9",
@@ -404,16 +350,7 @@
             ],
             "total_estimated_cells": 1
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "77eae23a-27df-5717-985f-cf44fc7fef83",
@@ -451,16 +388,7 @@
                 "38"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
@@ -476,96 +404,7 @@
                 "single cell"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "e3446f39-8019-5b35-afda-c9f8ff052925",
@@ -581,16 +420,7 @@
                 true
             ]
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "e9f16c54-8b50-58e6-a87d-79186535fe50",
@@ -600,16 +430,7 @@
                 "771ddaf6-3a4f-4314-97fe-6294ff8e25a4"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "c4f47156-020a-5608-a4c6-97cf03b620ea",
@@ -661,14 +482,69 @@
                 "https://www.ebi.ac.uk/gxa/sc/experiments/E-GEOD-81547/Results"
             ]
         },
+        "relations": []
+    },
+    {
+        "id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "application/gzip; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "54bb9c82",
+            "document_id": "70d1af4a-82c8-478a-8960-e9028b3616ca",
+            "drs_path": "74897eb7-0701-4e4f-9e6b-8b9521b2816b?version=2018-11-02T113344.450442Z",
+            "file_format": "fastq.gz",
+            "file_type": "sequence_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "SRR3562915_2.fastq.gz",
+            "read_index": "read2",
+            "related_files": [],
+            "sha256": "465a230aa127376fa641f8b8f8cad3f08fef37c8aafc67be454f0f0e4e63d68d",
+            "size": 190330156,
+            "source": "",
+            "uuid": "74897eb7-0701-4e4f-9e6b-8b9521b2816b",
+            "version": "2018-11-02T113344.450442Z"
+        },
         "relations": [
             {
-                "dst_id": "9c0dfa6c-a1d8-514a-af47-e7685460b8e7",
-                "dst_name": "files"
+                "dst_id": "3708c935-c56a-5e77-81ca-4dab0a79a1d9",
+                "dst_name": "cell_suspensions"
             },
             {
-                "dst_id": "aeb83f67-8fc3-5a3b-943a-b8b9aceb7047",
-                "dst_name": "files"
+                "dst_id": "77eae23a-27df-5717-985f-cf44fc7fef83",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "c4f47156-020a-5608-a4c6-97cf03b620ea",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "6a123efc-70f7-54b5-ab76-f3532ed9ab6b",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "3ff3b505-85a5-5481-aff2-d15f6d4e3ba2",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "e9f16c54-8b50-58e6-a87d-79186535fe50",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "e3446f39-8019-5b35-afda-c9f8ff052925",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "3e4cf070-90a6-56ad-aa7e-72e8343d3fbf",
+                "dst_name": "specimens"
             }
         ]
     },
@@ -697,34 +573,44 @@
             "uuid": "7b07f99e-4a8a-4ad0-bd4f-db0d7a00c7bb",
             "version": "2018-11-02T113344.698028Z"
         },
-        "relations": []
-    },
-    {
-        "id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "application/octet-stream; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "7581baea",
-            "document_id": "b7f69b47-cbdf-4ec9-be6e-d316827aad8e",
-            "drs_path": "cf859616-212d-4579-bd86-03c5f8e06ec0?version=2018-10-10T031036.453150Z",
-            "file_format": "results",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_rsem.genes.results",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "60462c3b1ccde59bbff0f3b62a4f8491d07a0d7a55abbb2df093f72aaadb77b5",
-            "size": 7629174,
-            "source": "",
-            "uuid": "cf859616-212d-4579-bd86-03c5f8e06ec0",
-            "version": "2018-10-10T031036.453150Z"
-        },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "3708c935-c56a-5e77-81ca-4dab0a79a1d9",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "77eae23a-27df-5717-985f-cf44fc7fef83",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "c4f47156-020a-5608-a4c6-97cf03b620ea",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "6a123efc-70f7-54b5-ab76-f3532ed9ab6b",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "3ff3b505-85a5-5481-aff2-d15f6d4e3ba2",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "e9f16c54-8b50-58e6-a87d-79186535fe50",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "e3446f39-8019-5b35-afda-c9f8ff052925",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "3e4cf070-90a6-56ad-aa7e-72e8343d3fbf",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "561bbf98-e19e-50fa-9a93-c201572431d5",
@@ -776,88 +662,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
@@ -873,136 +678,7 @@
                 "cell_suspension"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
@@ -1039,88 +715,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
@@ -1143,88 +738,7 @@
             ],
             "total_estimated_cells": ""
         },
-        "relations": [
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
@@ -1259,88 +773,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
@@ -1356,88 +789,7 @@
                 true
             ]
         },
-        "relations": [
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "596a7b12-9143-5436-89df-b445d7458064",
@@ -1447,136 +799,7 @@
                 "5afa951e-1591-4bad-a4f8-2e13cbdb760c"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
@@ -1627,86 +850,197 @@
                 ""
             ]
         },
+        "relations": []
+    },
+    {
+        "id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "application/octet-stream; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "7581baea",
+            "document_id": "b7f69b47-cbdf-4ec9-be6e-d316827aad8e",
+            "drs_path": "cf859616-212d-4579-bd86-03c5f8e06ec0?version=2018-10-10T031036.453150Z",
+            "file_format": "results",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_rsem.genes.results",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "60462c3b1ccde59bbff0f3b62a4f8491d07a0d7a55abbb2df093f72aaadb77b5",
+            "size": 7629174,
+            "source": "",
+            "uuid": "cf859616-212d-4579-bd86-03c5f8e06ec0",
+            "version": "2018-10-10T031036.453150Z"
+        },
         "relations": [
             {
-                "dst_id": "1cfc7842-6751-58a6-91b3-8f0e12ddaf07",
-                "dst_name": "files"
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
             },
             {
-                "dst_id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
-                "dst_name": "files"
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
             },
             {
-                "dst_id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-                "dst_name": "files"
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
             },
             {
-                "dst_id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
-                "dst_name": "files"
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
             },
             {
-                "dst_id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-                "dst_name": "files"
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
             },
             {
-                "dst_id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
-                "dst_name": "files"
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
             },
             {
-                "dst_id": "62914fc2-30e4-5559-886c-82ae9c452288",
-                "dst_name": "files"
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
             },
             {
-                "dst_id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
-                "dst_name": "files"
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
             },
             {
-                "dst_id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-                "dst_name": "files"
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "aa52bc18-0938-5187-a520-e39e9329cfba",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "text/plain; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "074766b5",
+            "document_id": "48e42fe3-41cd-49bd-b7f4-1e3c49682131",
+            "drs_path": "ac880333-cb92-4f55-971a-614bd065d8ef?version=2018-10-10T031031.316188Z",
+            "file_format": "txt",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_qc.bait_bias_summary_metrics.txt",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "cb53289c95fd1030726cf93e509d4dc37461bc21b29ff8d2a4165b086dd75f50",
+            "size": 2708,
+            "source": "",
+            "uuid": "ac880333-cb92-4f55-971a-614bd065d8ef",
+            "version": "2018-10-10T031031.316188Z"
+        },
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
             },
             {
-                "dst_id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-                "dst_name": "files"
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
             },
             {
-                "dst_id": "801ee052-3924-58f7-b65a-aa809430140f",
-                "dst_name": "files"
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
             },
             {
-                "dst_id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
-                "dst_name": "files"
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
             },
             {
-                "dst_id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
-                "dst_name": "files"
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
             },
             {
-                "dst_id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
-                "dst_name": "files"
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
             },
             {
-                "dst_id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-                "dst_name": "files"
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
             },
             {
-                "dst_id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
-                "dst_name": "files"
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
             },
             {
-                "dst_id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-                "dst_name": "files"
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "text/plain; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "e8b38826",
+            "document_id": "0b34a80b-c818-4010-b193-e44a77036e27",
+            "drs_path": "2526ee96-c839-4d0e-869c-585fc9066cda?version=2018-10-10T031032.229536Z",
+            "file_format": "txt",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_qc.quality_distribution_metrics.txt",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "fb2c9cb1dd646e7941086b570df03fb5d6f8c539b0789a1ae1d18fa1129d0838",
+            "size": 1490,
+            "source": "",
+            "uuid": "2526ee96-c839-4d0e-869c-585fc9066cda",
+            "version": "2018-10-10T031032.229536Z"
+        },
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
             },
             {
-                "dst_id": "db203db2-9292-5941-acce-a4ba1e30a632",
-                "dst_name": "files"
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
             },
             {
-                "dst_id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
-                "dst_name": "files"
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
             },
             {
-                "dst_id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
-                "dst_name": "files"
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
             }
         ]
     },
@@ -1735,61 +1069,44 @@
             "uuid": "f7cbd75f-abb1-4703-bf11-7d55a28ae5c0",
             "version": "2018-10-10T031033.596635Z"
         },
-        "relations": []
-    },
-    {
-        "id": "1e9c67b8-9d8c-5b15-bd4c-3e9f4add9eba",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "text/plain; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "e8b38826",
-            "document_id": "0b34a80b-c818-4010-b193-e44a77036e27",
-            "drs_path": "2526ee96-c839-4d0e-869c-585fc9066cda?version=2018-10-10T031032.229536Z",
-            "file_format": "txt",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_qc.quality_distribution_metrics.txt",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "fb2c9cb1dd646e7941086b570df03fb5d6f8c539b0789a1ae1d18fa1129d0838",
-            "size": 1490,
-            "source": "",
-            "uuid": "2526ee96-c839-4d0e-869c-585fc9066cda",
-            "version": "2018-10-10T031032.229536Z"
-        },
-        "relations": []
-    },
-    {
-        "id": "aa52bc18-0938-5187-a520-e39e9329cfba",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "text/plain; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "074766b5",
-            "document_id": "48e42fe3-41cd-49bd-b7f4-1e3c49682131",
-            "drs_path": "ac880333-cb92-4f55-971a-614bd065d8ef?version=2018-10-10T031031.316188Z",
-            "file_format": "txt",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_qc.bait_bias_summary_metrics.txt",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "cb53289c95fd1030726cf93e509d4dc37461bc21b29ff8d2a4165b086dd75f50",
-            "size": 2708,
-            "source": "",
-            "uuid": "ac880333-cb92-4f55-971a-614bd065d8ef",
-            "version": "2018-10-10T031031.316188Z"
-        },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "2e7f763b-f53f-5f12-8836-f0ccb9be7db9",
@@ -1816,115 +1133,44 @@
             "uuid": "ee417573-2281-439a-98f9-05fcb5dd2faf",
             "version": "2018-10-10T031031.845129Z"
         },
-        "relations": []
-    },
-    {
-        "id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "text/csv; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "ec79e888",
-            "document_id": "21319798-fe9e-40a4-bcdb-a4c0780ee7bf",
-            "drs_path": "70367094-c901-4d72-a6b3-d2859729073a?version=2018-10-10T031034.734838Z",
-            "file_format": "csv",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_pre_adapter_detail_metrics.csv",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "674f7fc16bb8c8e4ac0fb03779045ed0c1fdbe8ac6523dcac9341f94a7e2313d",
-            "size": 27293,
-            "source": "",
-            "uuid": "70367094-c901-4d72-a6b3-d2859729073a",
-            "version": "2018-10-10T031034.734838Z"
-        },
-        "relations": []
-    },
-    {
-        "id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "text/csv; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "5191baeb",
-            "document_id": "fd67cd38-2483-49ff-8a9b-0fe1f2607901",
-            "drs_path": "84985aaf-e397-45ee-8b96-37ed2cc650d4?version=2018-10-10T031035.017351Z",
-            "file_format": "csv",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_pre_adapter_summary_metrics.csv",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "8b90565cdda2daa693e74d5b9e7652eb4bb6aae91e6993b084f1103a9bfda23b",
-            "size": 1899,
-            "source": "",
-            "uuid": "84985aaf-e397-45ee-8b96-37ed2cc650d4",
-            "version": "2018-10-10T031035.017351Z"
-        },
-        "relations": []
-    },
-    {
-        "id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "application/octet-stream; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "6ce5efc2",
-            "document_id": "da510e7a-5495-40c5-964d-b5291372102c",
-            "drs_path": "7eda54d3-3522-4079-9089-60839ee4d4f9?version=2018-10-10T031035.686843Z",
-            "file_format": "bai",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_qc.bam.bai",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "d7dd835ba3e9cf56958976fc90267786233958c92d9dfcd5a6cb3c0ce95a52e2",
-            "size": 1399032,
-            "source": "",
-            "uuid": "7eda54d3-3522-4079-9089-60839ee4d4f9",
-            "version": "2018-10-10T031035.686843Z"
-        },
-        "relations": []
-    },
-    {
-        "id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "text/csv; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "8c75cbf7",
-            "document_id": "18791e67-0c74-43e0-be28-f0c3cd78c7a4",
-            "drs_path": "35a4d374-9eb3-404b-8ef9-fa295062f969?version=2018-10-10T031033.293412Z",
-            "file_format": "csv",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_bait_bias_detail_metrics.csv",
-            "read_index": "",
-            "related_files": [],
-            "sha256": "e6e979ccfbdbadff06e07596b8da15223aefd278552877a318a3b6ee9c6b9e41",
-            "size": 29544,
-            "source": "",
-            "uuid": "35a4d374-9eb3-404b-8ef9-fa295062f969",
-            "version": "2018-10-10T031033.293412Z"
-        },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "ac3becb6-85f5-5f37-89c3-5bf2aaf51e9f",
@@ -1951,7 +1197,300 @@
             "uuid": "29466279-4d12-44dd-9f87-8429b61a9f13",
             "version": "2018-10-10T031033.862470Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "b5dea505-9b18-5ab1-8ef1-a75c41a5444a",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "text/csv; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "5191baeb",
+            "document_id": "fd67cd38-2483-49ff-8a9b-0fe1f2607901",
+            "drs_path": "84985aaf-e397-45ee-8b96-37ed2cc650d4?version=2018-10-10T031035.017351Z",
+            "file_format": "csv",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_pre_adapter_summary_metrics.csv",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "8b90565cdda2daa693e74d5b9e7652eb4bb6aae91e6993b084f1103a9bfda23b",
+            "size": 1899,
+            "source": "",
+            "uuid": "84985aaf-e397-45ee-8b96-37ed2cc650d4",
+            "version": "2018-10-10T031035.017351Z"
+        },
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "4b12dade-46b6-57c8-8752-9725fb2badf8",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "text/csv; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "ec79e888",
+            "document_id": "21319798-fe9e-40a4-bcdb-a4c0780ee7bf",
+            "drs_path": "70367094-c901-4d72-a6b3-d2859729073a?version=2018-10-10T031034.734838Z",
+            "file_format": "csv",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_pre_adapter_detail_metrics.csv",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "674f7fc16bb8c8e4ac0fb03779045ed0c1fdbe8ac6523dcac9341f94a7e2313d",
+            "size": 27293,
+            "source": "",
+            "uuid": "70367094-c901-4d72-a6b3-d2859729073a",
+            "version": "2018-10-10T031034.734838Z"
+        },
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "695a14d9-48d0-510a-bed1-2dbd90f8e5c7",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "text/csv; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "8c75cbf7",
+            "document_id": "18791e67-0c74-43e0-be28-f0c3cd78c7a4",
+            "drs_path": "35a4d374-9eb3-404b-8ef9-fa295062f969?version=2018-10-10T031033.293412Z",
+            "file_format": "csv",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_bait_bias_detail_metrics.csv",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "e6e979ccfbdbadff06e07596b8da15223aefd278552877a318a3b6ee9c6b9e41",
+            "size": 29544,
+            "source": "",
+            "uuid": "35a4d374-9eb3-404b-8ef9-fa295062f969",
+            "version": "2018-10-10T031033.293412Z"
+        },
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "6da00cfb-dbd2-5af7-9cb2-727b74d85c06",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "application/octet-stream; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "6ce5efc2",
+            "document_id": "da510e7a-5495-40c5-964d-b5291372102c",
+            "drs_path": "7eda54d3-3522-4079-9089-60839ee4d4f9?version=2018-10-10T031035.686843Z",
+            "file_format": "bai",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0_qc.bam.bai",
+            "read_index": "",
+            "related_files": [],
+            "sha256": "d7dd835ba3e9cf56958976fc90267786233958c92d9dfcd5a6cb3c0ce95a52e2",
+            "size": 1399032,
+            "source": "",
+            "uuid": "7eda54d3-3522-4079-9089-60839ee4d4f9",
+            "version": "2018-10-10T031035.686843Z"
+        },
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "e522fd6d-df3b-57aa-ab2d-2aec56a9f9d2",
@@ -1978,7 +1517,44 @@
             "uuid": "2866dfcd-6346-4db8-ad1c-36a50dd99f44",
             "version": "2018-10-10T031031.541754Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "62914fc2-30e4-5559-886c-82ae9c452288",
@@ -2005,7 +1581,44 @@
             "uuid": "b1c167da-0825-4c63-9cbc-2aada1ab367c",
             "version": "2018-10-10T031035.971561Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "64c2d8c1-6a16-58ee-9b6a-79bbf0ee91e0",
@@ -2032,7 +1645,44 @@
             "uuid": "3a97e493-d758-4659-84f2-1c8060161459",
             "version": "2018-10-10T031032.503612Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "1d0693d7-9855-5806-84a0-9ff4ec951b9e",
@@ -2059,7 +1709,44 @@
             "uuid": "c005f647-b3fb-45a8-857a-8f5e6a878ccf",
             "version": "2018-10-10T023811.612423Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "801ee052-3924-58f7-b65a-aa809430140f",
@@ -2086,7 +1773,44 @@
             "uuid": "51c9ad31-5888-47eb-9e0c-02f042373c4e",
             "version": "2018-10-10T031035.284782Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "6232027f-10bf-5aca-8c4a-3cf94e4db706",
@@ -2113,7 +1837,44 @@
             "uuid": "b764ce7d-3938-4451-b68c-678feebc8f2a",
             "version": "2018-10-10T023811.851483Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "85290474-9cb2-5eaf-9aa0-7c4629951640",
@@ -2140,7 +1901,44 @@
             "uuid": "4f53c7d8-13fd-4e60-8168-df2a26652d8f",
             "version": "2018-10-10T031034.363765Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "8068b044-ede8-56f0-a285-23e8973d9aa2",
@@ -2167,7 +1965,44 @@
             "uuid": "e399a1c6-f595-400b-b71b-ea95707fbf74",
             "version": "2018-10-10T031032.812584Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "e5aef4f8-3de8-5f01-8e10-7bea507f3941",
@@ -2194,10 +2029,47 @@
             "uuid": "55878ed2-a7bf-423f-b6ee-97969e2e66ef",
             "version": "2018-10-10T031037.034867Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "901d2734-44f8-5c6e-b0b8-21e0c07580be",
+        "id": "33255cfb-bb7e-5fbf-bcb6-d8892df46e73",
         "name": "files",
         "object": {
             "_type": "file",
@@ -2217,6 +2089,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -2225,6 +2098,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -2233,6 +2107,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -2241,6 +2116,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -2249,6 +2125,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -2257,6 +2134,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -2265,6 +2143,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -2273,6 +2152,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -2281,6 +2161,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -2289,6 +2170,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -2297,6 +2179,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -2305,6 +2188,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -2318,131 +2202,44 @@
             "uuid": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d",
             "version": "2018-10-10T031037.983672Z"
         },
-        "relations": []
-    },
-    {
-        "id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-        "name": "files",
-        "object": {
-            "_type": "file",
-            "content-type": "application/json; dcp-type=data",
-            "content_description": [
-                ""
-            ],
-            "crc32c": "444a7707",
-            "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
-            "file_format": "matrix",
-            "file_type": "analysis_file",
-            "indexed": false,
-            "lane_index": "",
-            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
-            "read_index": "",
-            "related_files": [
-                {
-                    "crc32c": "444a7707",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
-                    "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
-                    "size": 24,
-                    "uuid": "54541cc5-9010-425b-9037-22e43948c97c",
-                    "version": "2018-10-10T031038.239541Z"
-                },
-                {
-                    "crc32c": "444a7707",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
-                    "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
-                    "size": 24,
-                    "uuid": "66b8f976-6f1e-45b3-bd97-069658c3c847",
-                    "version": "2018-10-10T031038.474167Z"
-                },
-                {
-                    "crc32c": "c6ab0701",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
-                    "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
-                    "size": 333,
-                    "uuid": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62",
-                    "version": "2018-10-10T031038.714461Z"
-                },
-                {
-                    "crc32c": "cd2fd51f",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
-                    "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
-                    "size": 153,
-                    "uuid": "0c518a52-f315-4ea2-beed-1c9d8f2d802b",
-                    "version": "2018-10-10T031039.039270Z"
-                },
-                {
-                    "crc32c": "b89e6723",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
-                    "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
-                    "size": 341,
-                    "uuid": "136108ab-277e-47a4-acc3-1feed8fb2f25",
-                    "version": "2018-10-10T031039.426609Z"
-                },
-                {
-                    "crc32c": "caaefa77",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
-                    "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
-                    "size": 3054,
-                    "uuid": "0bef5419-739c-4a2c-aedb-43754d55d51c",
-                    "version": "2018-10-10T031039.642846Z"
-                },
-                {
-                    "crc32c": "f629ec34",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
-                    "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
-                    "size": 341,
-                    "uuid": "3a5f7299-1aa1-4060-9631-212c29b4d807",
-                    "version": "2018-10-10T031039.899615Z"
-                },
-                {
-                    "crc32c": "59d86b68",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
-                    "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
-                    "size": 192191,
-                    "uuid": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5",
-                    "version": "2018-10-10T031040.113268Z"
-                },
-                {
-                    "crc32c": "25d193cf",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
-                    "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
-                    "size": 337,
-                    "uuid": "68ba4711-1447-42ac-aa40-9c0e4cda1666",
-                    "version": "2018-10-10T031040.583439Z"
-                },
-                {
-                    "crc32c": "17a84191",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
-                    "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
-                    "size": 4054,
-                    "uuid": "27e66328-e337-4bcd-ba15-7893ecaf841f",
-                    "version": "2018-10-10T031040.801631Z"
-                },
-                {
-                    "crc32c": "25d193cf",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
-                    "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
-                    "size": 337,
-                    "uuid": "2ab1a516-ef36-41b6-a78f-513361658feb",
-                    "version": "2018-10-10T031040.958708Z"
-                },
-                {
-                    "crc32c": "bdc30523",
-                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
-                    "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
-                    "size": 1257,
-                    "uuid": "351970aa-bc4c-405e-a274-be9e08e42e98",
-                    "version": "2018-10-10T031041.135992Z"
-                }
-            ],
-            "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
-            "size": 24,
-            "source": "",
-            "uuid": "54541cc5-9010-425b-9037-22e43948c97c",
-            "version": "2018-10-10T031038.239541Z"
-        },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "45a517d9-5c3c-5ff9-b3cc-4b52c7b59da3",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "f0194e83-874c-5a80-8cf9-0857db9aeef6",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "3eadf5fb-bdcc-5037-bd9c-4b9eda987af4",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "b8f6b0f2-3412-5c7f-a8ec-1b6b81d609ba",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "561bbf98-e19e-50fa-9a93-c201572431d5",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "95ce40ca-5448-580e-90ec-8bfa31f41fea",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "dcb224a5-a6a3-550b-8215-3bd21e276fa1",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
         "id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
@@ -2494,56 +2291,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
@@ -2580,56 +2328,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
@@ -2652,56 +2351,7 @@
             ],
             "total_estimated_cells": ""
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
@@ -2736,56 +2386,7 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
@@ -2801,56 +2402,7 @@
                 "single cell"
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
@@ -2866,56 +2418,7 @@
                 true
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
         "id": "af668bf9-db07-553e-9325-55dbe5da1238",
@@ -2966,59 +2469,10 @@
                 ""
             ]
         },
-        "relations": [
-            {
-                "dst_id": "06d93c56-6a95-5213-9368-13d050d92067",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "361b378b-9848-538f-a7fc-2ced6143b77f",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "549d2028-28fa-5650-86e1-067909ac8818",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "5cb7ae21-08be-548c-9cc8-510145897310",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "98b452b5-1baa-517b-8855-c370864e6623",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ede0293c-b30e-5433-b02e-2db687483a75",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "ee3ad48b-8caf-56a8-9cf2-a1036d12bd69",
-                "dst_name": "files"
-            },
-            {
-                "dst_id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
-                "dst_name": "files"
-            }
-        ]
+        "relations": []
     },
     {
-        "id": "361b378b-9848-538f-a7fc-2ced6143b77f",
+        "id": "36749663-8e8a-58cf-845f-a1979d9a6a0d",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3028,7 +2482,180 @@
             ],
             "crc32c": "444a7707",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
+            "file_format": "matrix",
+            "file_type": "analysis_file",
+            "indexed": false,
+            "lane_index": "",
+            "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
+            "read_index": "",
+            "related_files": [
+                {
+                    "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
+                    "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
+                    "size": 24,
+                    "uuid": "54541cc5-9010-425b-9037-22e43948c97c",
+                    "version": "2018-10-10T031038.239541Z"
+                },
+                {
+                    "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
+                    "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
+                    "size": 24,
+                    "uuid": "66b8f976-6f1e-45b3-bd97-069658c3c847",
+                    "version": "2018-10-10T031038.474167Z"
+                },
+                {
+                    "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
+                    "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
+                    "size": 333,
+                    "uuid": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62",
+                    "version": "2018-10-10T031038.714461Z"
+                },
+                {
+                    "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
+                    "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
+                    "size": 153,
+                    "uuid": "0c518a52-f315-4ea2-beed-1c9d8f2d802b",
+                    "version": "2018-10-10T031039.039270Z"
+                },
+                {
+                    "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
+                    "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
+                    "size": 341,
+                    "uuid": "136108ab-277e-47a4-acc3-1feed8fb2f25",
+                    "version": "2018-10-10T031039.426609Z"
+                },
+                {
+                    "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
+                    "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
+                    "size": 3054,
+                    "uuid": "0bef5419-739c-4a2c-aedb-43754d55d51c",
+                    "version": "2018-10-10T031039.642846Z"
+                },
+                {
+                    "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
+                    "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
+                    "size": 341,
+                    "uuid": "3a5f7299-1aa1-4060-9631-212c29b4d807",
+                    "version": "2018-10-10T031039.899615Z"
+                },
+                {
+                    "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
+                    "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
+                    "size": 192191,
+                    "uuid": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5",
+                    "version": "2018-10-10T031040.113268Z"
+                },
+                {
+                    "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
+                    "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
+                    "size": 337,
+                    "uuid": "68ba4711-1447-42ac-aa40-9c0e4cda1666",
+                    "version": "2018-10-10T031040.583439Z"
+                },
+                {
+                    "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
+                    "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
+                    "size": 4054,
+                    "uuid": "27e66328-e337-4bcd-ba15-7893ecaf841f",
+                    "version": "2018-10-10T031040.801631Z"
+                },
+                {
+                    "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
+                    "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
+                    "size": 337,
+                    "uuid": "2ab1a516-ef36-41b6-a78f-513361658feb",
+                    "version": "2018-10-10T031040.958708Z"
+                },
+                {
+                    "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
+                    "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
+                    "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
+                    "size": 1257,
+                    "uuid": "351970aa-bc4c-405e-a274-be9e08e42e98",
+                    "version": "2018-10-10T031041.135992Z"
+                }
+            ],
+            "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
+            "size": 24,
+            "source": "",
+            "uuid": "54541cc5-9010-425b-9037-22e43948c97c",
+            "version": "2018-10-10T031038.239541Z"
+        },
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
+    },
+    {
+        "id": "d689677d-7be4-5a0e-bdcf-2062e2bac01f",
+        "name": "files",
+        "object": {
+            "_type": "file",
+            "content-type": "application/json; dcp-type=data",
+            "content_description": [
+                ""
+            ],
+            "crc32c": "444a7707",
+            "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
+            "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3038,6 +2665,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3046,6 +2674,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3054,6 +2683,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3062,6 +2692,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3070,6 +2701,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3078,6 +2710,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3086,6 +2719,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3094,6 +2728,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3102,6 +2737,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3110,6 +2746,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3118,6 +2755,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3126,6 +2764,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3139,10 +2778,47 @@
             "uuid": "66b8f976-6f1e-45b3-bd97-069658c3c847",
             "version": "2018-10-10T031038.474167Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "4fd11106-800a-571b-b6b7-717cbc3c1cf4",
+        "id": "bd7fe524-52d9-5359-9690-75e24a53295d",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3152,7 +2828,7 @@
             ],
             "crc32c": "c6ab0701",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3162,6 +2838,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3170,6 +2847,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3178,6 +2856,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3186,6 +2865,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3194,6 +2874,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3202,6 +2883,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3210,6 +2892,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3218,6 +2901,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3226,6 +2910,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3234,6 +2919,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3242,6 +2928,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3250,6 +2937,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3263,10 +2951,47 @@
             "uuid": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62",
             "version": "2018-10-10T031038.714461Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "ac3009ca-e4dd-59e5-bef9-28124bda942b",
+        "id": "b3a10a84-94d8-5f2b-b05e-cbc20d904667",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3276,7 +3001,7 @@
             ],
             "crc32c": "cd2fd51f",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3286,6 +3011,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3294,6 +3020,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3302,6 +3029,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3310,6 +3038,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3318,6 +3047,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3326,6 +3056,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3334,6 +3065,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3342,6 +3074,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3350,6 +3083,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3358,6 +3092,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3366,6 +3101,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3374,6 +3110,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3387,10 +3124,47 @@
             "uuid": "0c518a52-f315-4ea2-beed-1c9d8f2d802b",
             "version": "2018-10-10T031039.039270Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "98b452b5-1baa-517b-8855-c370864e6623",
+        "id": "871b5682-5ca4-5009-924c-af286060383f",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3400,7 +3174,7 @@
             ],
             "crc32c": "b89e6723",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3410,6 +3184,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3418,6 +3193,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3426,6 +3202,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3434,6 +3211,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3442,6 +3220,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3450,6 +3229,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3458,6 +3238,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3466,6 +3247,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3474,6 +3256,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3482,6 +3265,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3490,6 +3274,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3498,6 +3283,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3511,10 +3297,47 @@
             "uuid": "136108ab-277e-47a4-acc3-1feed8fb2f25",
             "version": "2018-10-10T031039.426609Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "fa0e3952-65ee-59b0-bbb2-14fd9a9d58b3",
+        "id": "4c1b659a-ed5f-523c-a6b0-93f23ec5adf5",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3524,7 +3347,7 @@
             ],
             "crc32c": "caaefa77",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3534,6 +3357,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3542,6 +3366,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3550,6 +3375,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3558,6 +3384,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3566,6 +3393,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3574,6 +3402,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3582,6 +3411,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3590,6 +3420,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3598,6 +3429,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3606,6 +3438,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3614,6 +3447,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3622,6 +3456,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3635,10 +3470,47 @@
             "uuid": "0bef5419-739c-4a2c-aedb-43754d55d51c",
             "version": "2018-10-10T031039.642846Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "5aa8b738-8523-5197-af7e-e0de961a3f74",
+        "id": "0241c95b-7c2a-5b54-bae9-ebeefcb88a99",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3648,7 +3520,7 @@
             ],
             "crc32c": "f629ec34",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3658,6 +3530,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3666,6 +3539,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3674,6 +3548,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3682,6 +3557,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3690,6 +3566,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3698,6 +3575,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3706,6 +3584,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3714,6 +3593,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3722,6 +3602,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3730,6 +3611,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3738,6 +3620,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3746,6 +3629,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3759,10 +3643,47 @@
             "uuid": "3a5f7299-1aa1-4060-9631-212c29b4d807",
             "version": "2018-10-10T031039.899615Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "06d93c56-6a95-5213-9368-13d050d92067",
+        "id": "2116fa8c-4813-5f82-82c7-667a1015c15a",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3772,7 +3693,7 @@
             ],
             "crc32c": "59d86b68",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3782,6 +3703,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3790,6 +3712,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3798,6 +3721,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3806,6 +3730,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3814,6 +3739,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3822,6 +3748,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3830,6 +3757,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3838,6 +3766,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3846,6 +3775,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3854,6 +3784,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3862,6 +3793,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3870,6 +3802,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -3883,10 +3816,47 @@
             "uuid": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5",
             "version": "2018-10-10T031040.113268Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "549d2028-28fa-5650-86e1-067909ac8818",
+        "id": "b8986db0-0146-5721-973d-e7a02751499a",
         "name": "files",
         "object": {
             "_type": "file",
@@ -3896,7 +3866,7 @@
             ],
             "crc32c": "25d193cf",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -3906,6 +3876,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3914,6 +3885,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -3922,6 +3894,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -3930,6 +3903,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -3938,6 +3912,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -3946,6 +3921,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -3954,6 +3930,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -3962,6 +3939,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -3970,6 +3948,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3978,6 +3957,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -3986,6 +3966,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -3994,6 +3975,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -4007,10 +3989,47 @@
             "uuid": "68ba4711-1447-42ac-aa40-9c0e4cda1666",
             "version": "2018-10-10T031040.583439Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "ede0293c-b30e-5433-b02e-2db687483a75",
+        "id": "f9fa339c-1784-5931-b614-c85d62af58c3",
         "name": "files",
         "object": {
             "_type": "file",
@@ -4020,7 +4039,7 @@
             ],
             "crc32c": "17a84191",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -4030,6 +4049,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -4038,6 +4058,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -4046,6 +4067,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -4054,6 +4076,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -4062,6 +4085,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -4070,6 +4094,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -4078,6 +4103,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -4086,6 +4112,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -4094,6 +4121,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -4102,6 +4130,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -4110,6 +4139,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -4118,6 +4148,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -4131,10 +4162,47 @@
             "uuid": "27e66328-e337-4bcd-ba15-7893ecaf841f",
             "version": "2018-10-10T031040.801631Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "5cb7ae21-08be-548c-9cc8-510145897310",
+        "id": "4da8b6d6-d169-51e2-a49d-022c716bf802",
         "name": "files",
         "object": {
             "_type": "file",
@@ -4144,7 +4212,7 @@
             ],
             "crc32c": "25d193cf",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -4154,6 +4222,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -4162,6 +4231,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -4170,6 +4240,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -4178,6 +4249,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -4186,6 +4258,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -4194,6 +4267,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -4202,6 +4276,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -4210,6 +4285,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -4218,6 +4294,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -4226,6 +4303,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -4234,6 +4312,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -4242,6 +4321,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -4255,10 +4335,47 @@
             "uuid": "2ab1a516-ef36-41b6-a78f-513361658feb",
             "version": "2018-10-10T031040.958708Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     },
     {
-        "id": "2e836dbd-23fe-5aa9-8307-e4ef50ec91d4",
+        "id": "b8a44e0e-41df-5ed2-8762-731cf82e11bd",
         "name": "files",
         "object": {
             "_type": "file",
@@ -4268,7 +4385,7 @@
             ],
             "crc32c": "bdc30523",
             "document_id": "b4767274-c12b-401f-8bc1-9c9213149442",
-            "drs_path": "c1c4a2bc-b5fb-4083-af64-f5dec70d7f9d?version=2018-10-10T031037.983672Z",
+            "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
             "file_format": "matrix",
             "file_type": "analysis_file",
             "indexed": false,
@@ -4278,6 +4395,7 @@
             "related_files": [
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "54541cc5-9010-425b-9037-22e43948c97c?version=2018-10-10T031038.239541Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -4286,6 +4404,7 @@
                 },
                 {
                     "crc32c": "444a7707",
+                    "drs_path": "66b8f976-6f1e-45b3-bd97-069658c3c847?version=2018-10-10T031038.474167Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/.zgroup",
                     "sha256": "2383746e67b4bcc2762b3f100f06c3fa2d5f149ab5a8e5da5d33521464a01959",
                     "size": 24,
@@ -4294,6 +4413,7 @@
                 },
                 {
                     "crc32c": "c6ab0701",
+                    "drs_path": "ac05d7fb-d6b9-4ab1-8c04-6211450dbb62?version=2018-10-10T031038.714461Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/.zarray",
                     "sha256": "b0ae46aff3e2446c88dbde31abfb6253fcc8b571195f536f83d0641a29890669",
                     "size": 333,
@@ -4302,6 +4422,7 @@
                 },
                 {
                     "crc32c": "cd2fd51f",
+                    "drs_path": "0c518a52-f315-4ea2-beed-1c9d8f2d802b?version=2018-10-10T031039.039270Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/cell_id/0.0",
                     "sha256": "fa77e1466fbe9d016b8c20dade29ebc19356e586d725feaf83d3efc7b007161a",
                     "size": 153,
@@ -4310,6 +4431,7 @@
                 },
                 {
                     "crc32c": "b89e6723",
+                    "drs_path": "136108ab-277e-47a4-acc3-1feed8fb2f25?version=2018-10-10T031039.426609Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/.zarray",
                     "sha256": "31f6f311ce1934669c993d3ae909f89084d605554312bc34262340e3f37005ca",
                     "size": 341,
@@ -4318,6 +4440,7 @@
                 },
                 {
                     "crc32c": "caaefa77",
+                    "drs_path": "0bef5419-739c-4a2c-aedb-43754d55d51c?version=2018-10-10T031039.642846Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/expression/0.0",
                     "sha256": "625a4c8c5224432840964847bbefaf43cd535d9313d045ac5c9cb19411c86bee",
                     "size": 3054,
@@ -4326,6 +4449,7 @@
                 },
                 {
                     "crc32c": "f629ec34",
+                    "drs_path": "3a5f7299-1aa1-4060-9631-212c29b4d807?version=2018-10-10T031039.899615Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/.zarray",
                     "sha256": "5c65571866242de9ca10a299eb14d239d5c5c5f4538835b2df600bb212076083",
                     "size": 341,
@@ -4334,6 +4458,7 @@
                 },
                 {
                     "crc32c": "59d86b68",
+                    "drs_path": "a8f0dc39-6019-4fc7-899d-4e34a48d03e5?version=2018-10-10T031040.113268Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/gene_id/0.0",
                     "sha256": "ad468829c4ad38e218b5d0c1573803aba4a5fed31b6fc755c6394d97ac0d417b",
                     "size": 192191,
@@ -4342,6 +4467,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "68ba4711-1447-42ac-aa40-9c0e4cda1666?version=2018-10-10T031040.583439Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -4350,6 +4476,7 @@
                 },
                 {
                     "crc32c": "17a84191",
+                    "drs_path": "27e66328-e337-4bcd-ba15-7893ecaf841f?version=2018-10-10T031040.801631Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_metric/0.0",
                     "sha256": "215349395555fa4af2669d6119ef0ff39ba7aa3f34cb981041024466ff462693",
                     "size": 4054,
@@ -4358,6 +4485,7 @@
                 },
                 {
                     "crc32c": "25d193cf",
+                    "drs_path": "2ab1a516-ef36-41b6-a78f-513361658feb?version=2018-10-10T031040.958708Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/.zarray",
                     "sha256": "334848718d4aee17991ea4cd9f0585654e24c7967a0a11c5f259c7b8825d8227",
                     "size": 337,
@@ -4366,6 +4494,7 @@
                 },
                 {
                     "crc32c": "bdc30523",
+                    "drs_path": "351970aa-bc4c-405e-a274-be9e08e42e98?version=2018-10-10T031041.135992Z",
                     "name": "377f2f5a-4a45-4c62-8fb0-db9ef33f5cf0.zarr/expression_matrix/qc_values/0.0",
                     "sha256": "af4b69064dd3f393d9da8138f0f5b5599e5fcac35daa0cc0233ec229c5135d0a",
                     "size": 1257,
@@ -4379,6 +4508,43 @@
             "uuid": "351970aa-bc4c-405e-a274-be9e08e42e98",
             "version": "2018-10-10T031041.135992Z"
         },
-        "relations": []
+        "relations": [
+            {
+                "dst_id": "104ad602-1c02-5147-bac1-e9fa5e8dab29",
+                "dst_name": "cell_suspensions"
+            },
+            {
+                "dst_id": "d62b8107-7a0e-500a-b08b-4b1bea6d1917",
+                "dst_name": "donors"
+            },
+            {
+                "dst_id": "f0fc3967-3d8c-59ce-91aa-7e3f68557a47",
+                "dst_name": "library_preparation_protocols"
+            },
+            {
+                "dst_id": "af668bf9-db07-553e-9325-55dbe5da1238",
+                "dst_name": "projects"
+            },
+            {
+                "dst_id": "3bb22f3a-864c-5fd9-b2ec-93ac1a01129d",
+                "dst_name": "samples"
+            },
+            {
+                "dst_id": "2f7e7a22-8eea-5a7d-92c9-164cd1986756",
+                "dst_name": "sequencing_inputs"
+            },
+            {
+                "dst_id": "596a7b12-9143-5436-89df-b445d7458064",
+                "dst_name": "sequencing_processes"
+            },
+            {
+                "dst_id": "0fdeb217-9e6b-564f-b2ef-58aa6f6948ad",
+                "dst_name": "sequencing_protocols"
+            },
+            {
+                "dst_id": "d9cbf884-5fc5-5278-b374-ceb165d86656",
+                "dst_name": "specimens"
+            }
+        ]
     }
 ]

@@ -90,15 +90,7 @@ class PFBConverter:
         Add an Elasticsearch document to be transformed.
         """
         contents = doc['contents']
-        # File entities are assumed to be unique
-        file_entity = PFBEntity.from_json(name='files',
-                                          object_=one(contents['files']),
-                                          schema=self.schema)
-        assert file_entity not in self._entities
-        # File entities won't relate *to* anything, but things relate *to* them.
-        # Terra streams PFBs and thus entities must be defined before they are
-        # referenced. Thus, file_entity is added first.
-        self._entities[file_entity] = set()
+        file_relations = set()
         for entity_type, entity in contents.items():
             if entity_type != 'files':
                 if len(entity) == 0:
@@ -107,9 +99,19 @@ class PFBConverter:
                     entity = PFBEntity.from_json(name=entity_type,
                                                  object_=one(entity),
                                                  schema=self.schema)
-                    self._entities[entity].add(PFBRelation.to_entity(file_entity))
+                    self._entities[entity] = set()
+                    file_relations.add(PFBRelation.to_entity(entity))
                 else:
                     assert False, (doc, entity_type)
+        # File entities are assumed to be unique
+        file_entity = PFBEntity.from_json(name='files',
+                                          object_=one(contents['files']),
+                                          schema=self.schema)
+        assert file_entity not in self._entities
+        # Terra streams PFBs and requires entities be defined before they are
+        # referenced. Thus we add the file entity last, after all the entities
+        # it relates to.
+        self._entities[file_entity] = file_relations
 
     def entities(self) -> Iterable[JSON]:
         for entity, relations in self._entities.items():
