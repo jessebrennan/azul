@@ -727,15 +727,12 @@ class PortalRegistrationIntegrationTest(IntegrationTestCase, AlwaysTearDownTestC
                 }
                 self.portal_service._crud(lambda db: [*db, mock_entry])
 
-        executor = ThreadPoolExecutor(max_workers=n_threads)
-        try:
+        with ThreadPoolExecutor(max_workers=n_threads) as executor:
             futures = [executor.submit(run, i) for i in range(n_tasks)]
-            executor.shutdown(wait=True)
-        finally:
-            running = False
-            executor.shutdown(wait=True)
-
-        self.assertTrue(all(f.result() is None for f in futures))
+            try:
+                self.assertTrue(all(f.result() is None for f in futures))
+            finally:
+                running = False
 
         new_db = self.portal_service.read()
 
