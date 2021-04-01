@@ -2,6 +2,7 @@ import os
 import sys
 from typing import (
     Optional,
+    Tuple,
 )
 
 import git
@@ -54,20 +55,37 @@ def check_branch(branch: Optional[str], stage: str) -> None:
             raise RuntimeError(f"Protected branch '{branch}' should be deployed to '{expected_stage}', not '{stage}'")
 
 
+def check_gitlab(stage: str, *, is_gitlab: bool) -> None:
+    """
+    >>> check_gitlab('dev', is_gitlab=True)
+
+    >>> check_gitlab('dev', is_gitlab=False)
+
+    >>> check_gitlab('sandbox', is_gitlab=True)
+
+    >>> check_gitlab('sandbox', is_gitlab=False)
+    Traceback (most recent call last):
+    ...
+    RuntimeError: Only the GitLab runner should deploy to 'sandbox'
+    """
+    if stage == 'sandbox' and not is_gitlab:
+        raise RuntimeError(f"Only the GitLab runner should deploy to '{stage}'")
+
+
 def expected_stage(branch: Optional[str]) -> Optional[str]:
     return config.main_deployments_by_branch.get(branch)
 
 
-def current_branch() -> Optional[str]:
+def current_branch() -> Tuple[Optional[str], bool]:
     try:
         # Gitlab checks out a specific commit which results in a detached HEAD
         # (no active branch). Extract the branch name from the runner environment.
-        return os.environ['CI_COMMIT_REF_NAME']
+        return os.environ['CI_COMMIT_REF_NAME'], True
     except KeyError:
         # Detached head may also occur outside of Gitlab, in which case it is
         # only allowed for personal deployments.
         repo = git.Repo(config.project_root)
-        return None if repo.head.is_detached else repo.active_branch.name
+        return None if repo.head.is_detached else repo.active_branch.name, False
 
 
 def main(argv):
@@ -84,7 +102,7 @@ def main(argv):
                         help="Exit with non-zero status code if current deployment is a "
                              "main deployment.")
     args = parser.parse_args(argv)
-    branch = current_branch()
+    branch, is_gitlab = current_branch()
     if args.print:
         stage = expected_stage(branch)
         if stage is None:
@@ -94,6 +112,7 @@ def main(argv):
     else:
         stage = config.deployment_stage
         check_branch(branch, stage)
+        check_gitlab(stage, is_gitlab=is_gitlab)
     if args.personal:
         if config.deployment_stage in config.main_deployments_by_branch.values():
             raise RuntimeError(f"Selected deployment '{stage}' is not a personal deployment.")
