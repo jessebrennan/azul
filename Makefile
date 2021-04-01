@@ -108,11 +108,11 @@ delete: check_python check_branch
 
 .PHONY: index
 index: check_python check_branch
-	python scripts/reindex.py --index --partition-prefix-length=2
+	python scripts/reindex.py --index --remote
 
 .PHONY: reindex
 reindex: check_python check_branch
-	python scripts/reindex.py --delete --index --purge --partition-prefix-length=2
+	python scripts/reindex.py --delete --index --purge --remote
 
 .PHONY: clean
 clean: check_env
