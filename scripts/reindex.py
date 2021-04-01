@@ -100,6 +100,11 @@ parser.add_argument('--no-slots',
                     default=True,
                     action='store_false',
                     help='Suppress management of BigQuery slot commitments.')
+parser.add_argument('--remote',
+                    dest='remote',
+                    default=False,
+                    action='store_true',
+                    help='Perform the reindexing remotely')
 
 
 def main(argv: List[str]):
@@ -129,8 +134,8 @@ def main(argv: List[str]):
             ):
                 slot_manager = SlotManager()
                 slot_manager.ensure_slots_active()
-            if args.partition_prefix_length:
-                azul.remote_reindex(catalog, args.partition_prefix_length)
+            if args.remote:
+                azul.remote_reindex(catalog)
                 num_notifications = None
             else:
                 num_notifications += azul.reindex(catalog, args.prefix)

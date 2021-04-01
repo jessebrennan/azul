@@ -42,7 +42,7 @@ from azul import (
     hmac,
 )
 from azul.indexer import (
-    SourcedBundleFQID,
+    SourcedBundleFQID, SourceName,
 )
 from azul.indexer.index_service import (
     IndexService,
@@ -227,14 +227,16 @@ class AzulClient(object):
         return self.sqs.get_queue_by_name(QueueName=config.notifications_queue_name())
 
     def remote_reindex(self,
-                       catalog: CatalogName,
-                       partition_prefix_length: int):
-        partition_prefixes = [
-            ''.join(partition_prefix)
-            for partition_prefix in product('0123456789abcdef',
-                                            repeat=partition_prefix_length)
-        ]
+                       catalog: CatalogName):
+
         sources = self.repository_plugin(catalog).sources
+
+        def replace_partition_prefix(source: SourceName):
+            return [
+                ''.join(partition_prefix)
+                for partition_prefix in product('0123456789abcdef',
+                                                repeat=source.prefix_partition_length)
+            ]
 
         def message(source: str, partition_prefix: str) -> JSON:
             logger.info('Remotely reindexing prefix %r of source %r into catalog %r',
@@ -243,14 +245,14 @@ class AzulClient(object):
                         catalog=catalog,
                         source=str(source),
                         prefix=partition_prefix)
-
-        messages = starmap(message, product(sources, partition_prefixes))
-        for batch in chunked(messages, 10):
-            entries = [
-                dict(Id=str(i), MessageBody=json.dumps(message))
-                for i, message in enumerate(batch)
-            ]
-            self.notifications_queue.send_messages(Entries=entries)
+        for source in sources:
+            messages = starmap(message, product({source}, replace_partition_prefix(source)))
+            for batch in chunked(messages, 10):
+                entries = [
+                    dict(Id=str(i), MessageBody=json.dumps(message))
+                    for i, message in enumerate(batch)
+                ]
+                self.notifications_queue.send_messages(Entries=entries)
 
     def remote_reindex_partition(self, message: JSON) -> None:
         catalog = message['catalog']
