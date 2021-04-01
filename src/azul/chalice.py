@@ -187,6 +187,13 @@ class AzulChaliceApp(Chalice):
             assert wrapped_handler.lambda_name == name
         else:
             wrapped_handler.lambda_name = name
+        # We store any other parameters used to configure the handler for the
+        # same reason.
+        for k, v in kwargs.items():
+            if hasattr(wrapped_handler, k):
+                assert getattr(wrapped_handler, k) == v
+            else:
+                setattr(wrapped_handler, k, v)
 
     # Some type annotations to help with auto-complete
     lambda_context: LambdaContext

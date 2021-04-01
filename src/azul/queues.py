@@ -434,20 +434,23 @@ class Queues:
                 futures.append(tpe.submit(f, *args, **kwargs))
 
             indexer = load_app_module('indexer')
-
-            def lambda_name(lambda_):
-                return f'{config.indexer_name}-{lambda_.lambda_name}'
-
+            lambdas = [
+                indexer.contribute,
+                indexer.contribute_retry,
+                indexer.aggregate,
+                indexer.aggregate_retry
+            ]
+            queues_to_lambda = {lambda_.queue: lambda_ for lambda_ in lambdas}
             for queue_name, queue in queues.items():
                 if queue_name == config.notifications_queue_name():
+                    # Since the index lambda writes to the notifications queue,
+                    # we must deactivate it also.
                     submit(self._manage_lambda, config.indexer_name, enable)
-                    submit(self._manage_sqs_push, lambda_name(indexer.contribute), queue, enable)
-                elif queue_name == config.notifications_queue_name(retry=True):
-                    submit(self._manage_sqs_push, lambda_name(indexer.contribute_retry), queue, enable)
-                elif queue_name == config.tallies_queue_name():
-                    submit(self._manage_sqs_push, lambda_name(indexer.aggregate), queue, enable)
-                elif queue_name == config.tallies_queue_name(retry=True):
-                    submit(self._manage_sqs_push, lambda_name(indexer.aggregate_retry), queue, enable)
+                if queue_name in queues_to_lambda:
+                    lambda_name = f'{config.indexer_name}-{queues_to_lambda[queue_name].lambda_name}'
+                    submit(self._manage_lambda, lambda_name, enable)
+                else:
+                    assert 'fail' in queue_name
             self._handle_futures(futures)
             futures = [tpe.submit(self._wait_for_queue_idle, queue) for queue in queues.values()]
             self._handle_futures(futures)
