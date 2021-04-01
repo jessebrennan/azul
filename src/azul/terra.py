@@ -80,6 +80,7 @@ class TDRSourceName(SourceName):
     name: str
     is_snapshot: bool
     prefix: str = ''
+    prefix_partition_length: int
 
     _type_dataset = 'dataset'
 
@@ -123,7 +124,7 @@ class TDRSourceName(SourceName):
         azul.uuids.InvalidUUIDPrefixError: 'n32' is not a valid UUID prefix.
         """
         # BigQuery (and by extension the TDR) does not allow : or / in dataset names
-        service, project, name, prefix = source.split(':')
+        service, project, name, prefix, prefix_partition_length = source.split(':')
         type, name = name.split('/')
         assert service == 'tdr', service
         if type == cls._type_snapshot:
@@ -133,7 +134,11 @@ class TDRSourceName(SourceName):
         else:
             assert False, type
         validate_uuid_prefix(prefix)
-        self = cls(project=project, name=name, is_snapshot=is_snapshot, prefix=prefix)
+        self = cls(project=project,
+                   name=name,
+                   is_snapshot=is_snapshot,
+                   prefix=prefix,
+                   prefix_partition_length=int(prefix_partition_length))
         assert source == str(self), (source, self)
         return self
 
@@ -143,7 +148,9 @@ class TDRSourceName(SourceName):
 
     def __str__(self) -> str:
         source_type = self._type_snapshot if self.is_snapshot else self._type_dataset
-        return f'tdr:{self.project}:{source_type}/{self.name}:{self.prefix}'
+        return (f'tdr:{self.project}'
+                f':{source_type}/{self.name}'
+                f':{self.prefix}:{self.prefix_partition_length}')
 
     @property
     def type_name(self):
