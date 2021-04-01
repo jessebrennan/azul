@@ -42,6 +42,9 @@ from azul.files import (
 from azul.lambdas import (
     Lambdas,
 )
+from azul.modules import (
+    load_app_module,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -430,19 +433,21 @@ class Queues:
             def submit(f, *args, **kwargs):
                 futures.append(tpe.submit(f, *args, **kwargs))
 
+            indexer = load_app_module('indexer')
+
+            def lambda_name(lambda_):
+                return f'{config.indexer_name}-{lambda_.lambda_name}'
+
             for queue_name, queue in queues.items():
                 if queue_name == config.notifications_queue_name():
                     submit(self._manage_lambda, config.indexer_name, enable)
-                    submit(self._manage_sqs_push, config.indexer_name + '-contribute', queue, enable)
+                    submit(self._manage_sqs_push, lambda_name(indexer.contribute), queue, enable)
                 elif queue_name == config.notifications_queue_name(retry=True):
-                    submit(self._manage_sqs_push, config.indexer_name + '-contribute_retry', queue, enable)
+                    submit(self._manage_sqs_push, lambda_name(indexer.contribute_retry), queue, enable)
                 elif queue_name == config.tallies_queue_name():
-                    submit(self._manage_sqs_push, config.indexer_name + '-aggregate', queue, enable)
+                    submit(self._manage_sqs_push, lambda_name(indexer.aggregate), queue, enable)
                 elif queue_name == config.tallies_queue_name(retry=True):
-                    # FIXME: Brittle coupling between the string literal below and
-                    #        the handler function name in app.py
-                    #        https://github.com/DataBiosphere/azul/issues/1848
-                    submit(self._manage_sqs_push, config.indexer_name + '-aggregate_retry', queue, enable)
+                    submit(self._manage_sqs_push, lambda_name(indexer.aggregate_retry), queue, enable)
             self._handle_futures(futures)
             futures = [tpe.submit(self._wait_for_queue_idle, queue) for queue in queues.values()]
             self._handle_futures(futures)
