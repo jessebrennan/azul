@@ -689,8 +689,8 @@ class CurlManifestGenerator(StreamingManifestGenerator):
     def manifest_properties(cls, url: str) -> JSON:
         return {
             'command_line': {
-                'cmd.exe': f'curl.exe {cls._cmd_exe_quote(url)} | curl.exe --config -',
-                'bash': f'curl {shlex.quote(url)} | curl --config -'
+                'cmd.exe': f'curl.exe --location {cls._cmd_exe_quote(url)} | curl.exe --config -',
+                'bash': f'curl --location {shlex.quote(url)} | curl --config -'
             }
         }
 

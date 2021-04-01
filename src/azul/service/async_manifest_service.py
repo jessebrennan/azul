@@ -87,7 +87,12 @@ class AsyncManifestService(AbstractService):
         if token is None:
             execution_id = str(uuid.uuid4())
             self._start_manifest_generation(format_, catalog, filters, execution_id, object_key)
-            token = {'execution_id': execution_id}
+            token = {
+                'execution_id': execution_id,
+                'catalog': catalog,
+                'filters': json.dumps(filters),
+                'format': format_.value,
+            }
         else:
             token = self.decode_token(token)
         request_index = token.get('request_index', 0)

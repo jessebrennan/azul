@@ -81,7 +81,11 @@ class TestAsyncManifestService(AzulUnitTestCase):
         """
         A successful manifest job should return a 302 status and a url to the manifest
         """
-        manifest_url = 'https://url.to.manifest'
+        manifest_url = furl(config.service_endpoint(),
+                            path=['manifest', 'files'],
+                            args=dict(catalog='test',
+                                      filters=json.dumps({}),
+                                      format=ManifestFormat.compact.value)).url
         execution_id = '5b1b4899-f48e-46db-9285-2d342f3cdaf2'
         execution_success_output = {
             'executionArn': StepFunctionHelper().execution_arn(state_machine_name, execution_id),
@@ -104,7 +108,8 @@ class TestAsyncManifestService(AzulUnitTestCase):
         token = manifest_service.encode_token({'execution_id': execution_id})
         format_ = ManifestFormat.compact
         filters = manifest_service.parse_filters('{}')
-        wait_time, manifest = manifest_service.start_or_inspect_manifest_generation(self_url='',
+        self_url = furl(config.service_endpoint(), path=['fetch', 'manifest', 'files']).url
+        wait_time, manifest = manifest_service.start_or_inspect_manifest_generation(self_url=self_url,
                                                                                     format_=format_,
                                                                                     catalog=self.catalog,
                                                                                     filters=filters,

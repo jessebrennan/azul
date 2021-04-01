@@ -1628,9 +1628,13 @@ class TestManifestResponse(ManifestTestCase):
         Verify the response from the fetch manifest endpoint for all manifest
         formats with a mocked return value from `get_cached_manifest`.
         """
-        manifest_url = 'https://url.to.manifest?foo=bar'
         service = ManifestService(StorageService())
         for format_ in ManifestFormat:
+            manifest_url = furl(self.base_url,
+                                path=['manifest', 'files'],
+                                args=dict(catalog='test',
+                                          filters=json.dumps({}),
+                                          format=format_.value)).url
             with self.subTest(format_=format_):
                 # Mock get_cached_manifest.return_value with a dummy 'location'
                 # and a manifest format-specific 'properties' value.
@@ -1652,8 +1656,8 @@ class TestManifestResponse(ManifestTestCase):
                 }
                 if format_ == ManifestFormat.curl:
                     expected_json['CommandLine'] = {
-                        'cmd.exe': f'curl.exe "{manifest_url}" | curl.exe --config -',
-                        'bash': f"curl '{manifest_url}' | curl --config -"
+                        'cmd.exe': f'curl.exe --location "{manifest_url}" | curl.exe --config -',
+                        'bash': f"curl --location '{manifest_url}' | curl --config -"
                     }
                 self.assertEqual(expected_json, response_json, response.content)
 

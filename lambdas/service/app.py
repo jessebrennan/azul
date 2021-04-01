@@ -33,6 +33,9 @@ from chalice import (
     NotFoundError,
     Response,
 )
+from furl import (
+    furl,
+)
 from more_itertools import (
     one,
 )
@@ -119,6 +122,7 @@ from azul.service.manifest_service import (
     CurlManifestGenerator,
     Manifest,
     ManifestFormat,
+    ManifestGenerator,
     ManifestService,
 )
 from azul.service.repository_controller import (
@@ -1524,6 +1528,26 @@ def handle_manifest_generation_request() -> Tuple[int, Manifest]:
                     catalog=IndexName.validate_catalog_name,
                     filters=str,
                     token=str)
+
+    def amend_manifest_location(manifest: Manifest, token: str = None):
+        url = furl(app.self_url())
+        if 'fetch' in url.path.segments:
+            url.path.segments.remove('fetch')
+            if token is None:
+                url.args.update({'catalog': catalog,
+                                 'filters': json.dumps(filters),
+                                 'format': format_.value})
+            else:
+                token = async_service.decode_token(token)
+                url.args.update({'catalog': token['catalog'],
+                                 'filters': token['filters'],
+                                 'format': token['format']})
+            generator = ManifestGenerator.for_format(format_, service, catalog, filters)
+            manifest = Manifest(location=url.url,
+                                was_cached=manifest.was_cached,
+                                properties=generator.manifest_properties(url.url))
+        return 0, manifest
+
     catalog = app.catalog
     filters = query_params.get('filters', '{}')
     validate_filters(filters)
@@ -1538,22 +1562,27 @@ def handle_manifest_generation_request() -> Tuple[int, Manifest]:
                                                            catalog=catalog,
                                                            filters=filters)
         if manifest is not None:
-            return 0, manifest
+            return amend_manifest_location(manifest=manifest)
     name = config.state_machine_name(generate_manifest.lambda_name)
     async_service = AsyncManifestService(name)
     try:
-        return async_service.start_or_inspect_manifest_generation(app.self_url(),
-                                                                  format_=format_,
-                                                                  catalog=catalog,
-                                                                  filters=filters,
-                                                                  token=token,
-                                                                  object_key=object_key)
+        time, manifest = async_service.start_or_inspect_manifest_generation(app.self_url(),
+                                                                            format_=format_,
+                                                                            catalog=catalog,
+                                                                            filters=filters,
+                                                                            token=token,
+                                                                            object_key=object_key)
     except ClientError as e:
         if e.response['Error']['Code'] == 'ExecutionDoesNotExist':
             raise BadRequestError('Invalid token given')
         raise
     except ValueError as e:
         raise BadRequestError(e.args)
+    else:
+        if time == 0:
+            return amend_manifest_location(manifest=manifest, token=token)
+        else:
+            return time, manifest
 
 
 # noinspection PyUnusedLocal
